@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Venda e instalação de elevadores residenciais, comerciais e plataformas de acessibilidade Daiken com o melhor preço do Brasil. Atendimento completo em Brasília e para todo o território nacional. Qualidade, segurança e design para seu projeto.">
-    <title>Mob Advanced - Elevadores e Plataformas Daiken | Melhor Preço Brasil</title>
+    <title>Mob Elevadores - Elevadores e Plataformas Daiken | Melhor Preço Brasil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0A3D62; /* Azul Marinho Escuro */
-            --secondary-color: #1976D2; /* Azul Médio Vibrante */
-            --accent-color: #4CAF50; /* Verde para Ação */
-            --text-dark: #333333;
-            --text-light: #F0F4F8;
-            --bg-light: #F8FAFD;
-            --bg-white: #FFFFFF;
+            /* Cores inspiradas no site da Daiken Elevadores: Azuis e o Vermelho característico */
+            --primary-color: #005691; /* Azul forte, principal da Daiken */
+            --secondary-color: #007BFF; /* Azul mais claro para botões e detalhes */
+            --accent-color: #E4002B; /* Vermelho vibrante da Daiken para destaque/sucesso */
+            --text-dark: #333333; /* Texto mais escuro e suave */
+            --text-light: #f8f9fa; /* Texto claro */
+            --bg-light: #F0F4F7; /* Fundo cinza-azulado muito claro */
+            --bg-white: #ffffff; /* Fundo branco para seções */
             --shadow-light: rgba(0,0,0,0.08);
-            --shadow-medium: rgba(0,0,0,0.15);
+            --shadow-medium: rgba(0,0,0,0.12);
         }
 
         body {
@@ -35,13 +36,13 @@
             padding: 1.5em 1.5em;
             text-align: center;
             box-shadow: 0 4px 8px var(--shadow-light);
-            position: relative;
+            position: relative; /* Para o hero background */
             overflow: hidden;
             color: var(--text-dark);
         }
 
         header .hero-content {
-            z-index: 2;
+            z-index: 2; /* Para o texto ficar acima da imagem */
             position: relative;
             padding: 2em 0;
         }
@@ -79,7 +80,7 @@
         }
 
         .button:hover {
-            background: #1565C0; /* Tom mais escuro no hover */
+            background: #0056b3; /* Tom mais escuro no hover */
             transform: translateY(-2px);
         }
 
@@ -88,7 +89,7 @@
         }
 
         .button.secondary:hover {
-            background: #082C4A;
+            background: #00376B;
         }
 
         section {
@@ -110,7 +111,7 @@
 
         h2 {
             font-size: 2.2em;
-            border-bottom: 2px solid var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color); /* Usando secondary-color para a linha */
             padding-bottom: 0.5em;
             display: inline-block;
         }
@@ -167,7 +168,7 @@
         }
 
         .product-card-content .button {
-            width: calc(100% - 3em);
+            width: calc(100% - 3em); /* Ajusta a largura do botão ao card */
             text-align: center;
             display: block;
             margin: 0;
@@ -175,7 +176,7 @@
         }
 
         .cta-banner {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0D47A1 100%); /* Gradiente de azuis escuros */
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0066cc 100%);
             color: var(--text-light);
             padding: 3em 1.5em;
             text-align: center;
@@ -201,12 +202,12 @@
         }
         
         .cta-banner .button {
-            background: var(--accent-color);
+            background: var(--accent-color); /* Botão de CTA agora usa o vermelho */
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .cta-banner .button:hover {
-            background: #388E3C;
+            background: #BB0020; /* Tom mais escuro do vermelho no hover */
         }
 
         #orcamento form {
@@ -218,7 +219,7 @@
             border: 1px solid #eee;
             border-radius: 10px;
             box-shadow: 0 2px 10px var(--shadow-light);
-            text-align: left;
+            text-align: left; /* Alinha o texto do label à esquerda */
         }
 
         input[type="text"],
@@ -229,7 +230,7 @@
             padding: 1em;
             border-radius: 8px;
             border: 1px solid #ccc;
-            width: calc(100% - 2em);
+            width: calc(100% - 2em); /* Ajusta a largura para o padding */
             font-size: 1em;
             transition: border-color 0.3s ease;
         }
@@ -237,13 +238,13 @@
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.25); /* Cor baseada no secondary-color */
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
         }
 
         label {
             font-weight: 600;
             color: var(--primary-color);
-            display: block;
+            display: block; /* Garante que o label ocupe sua própria linha */
             margin-bottom: 0.5em;
         }
 
@@ -284,7 +285,7 @@
                 font-size: 1.1em;
             }
             .product-card img {
-                height: 200px;
+                height: 200px; /* Ajusta altura da imagem em mobile */
             }
         }
     </style>
@@ -293,7 +294,7 @@
 
     <header>
         <div class="hero-content">
-            <h1>Mob Advanced</h1>
+            <h1>Mob Elevadores</h1>
             <p>Sua jornada para o alto começa aqui: Elevadores e Plataformas Daiken com o **Melhor Preço do Brasil**.</p>
             <p>Atendimento completo em Brasília e para **todo o território nacional**.</p>
             <a href="#orcamento" class="button">Solicite um Orçamento Grátis</a>
@@ -302,8 +303,8 @@
     </header>
 
     <section id="sobre">
-        <h2>Por que escolher a Mob Advanced?</h2>
-        <p>Somos especialistas em soluções de elevação, unindo a **expertise da Mob Advanced** em instalação e manutenção com a **qualidade e inovação dos produtos Daiken Elevadores**.</p>
+        <h2>Por que escolher a Mob Elevadores?</h2>
+        <p>Somos especialistas em soluções de elevação, unindo a **expertise da Mob Elevadores** em instalação e manutenção com a **qualidade e inovação dos produtos Daiken Elevadores**.</p>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-card-content">
@@ -337,56 +338,56 @@
 
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/0A3D62/FFFFFF?text=Plataforma+AC02" alt="Plataforma AC02">
+                <img src="https://via.placeholder.com/600x400/004D99/FFFFFF?text=Plataforma+AC02" alt="Plataforma AC02">
                 <div class="product-card-content">
                     <h3>Plataforma AC02</h3>
                     <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg. Perfeita para acessibilidade discreta.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Ver Detalhes & Baixar Lâmina</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/0A3D62/FFFFFF?text=Plataforma+AC08" alt="Plataforma AC08">
+                <img src="https://via.placeholder.com/600x400/004D99/FFFFFF?text=Plataforma+AC08" alt="Plataforma AC08">
                 <div class="product-card-content">
                     <h3>Plataforma AC08</h3>
                     <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg. Segurança e elegância em um só produto.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Ver Detalhes & Baixar Lâmina</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/0A3D62/FFFFFF?text=Plataforma+AC11" alt="Plataforma AC11">
+                <img src="https://via.placeholder.com/600x400/004D99/FFFFFF?text=Plataforma+AC11" alt="Plataforma AC11">
                 <div class="product-card-content">
                     <h3>Plataforma AC11</h3>
                     <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, projetada para acessibilidade universal em espaços públicos e privados.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Ver Detalhes & Baixar Lâmina</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/0A3D62/FFFFFF?text=Elevador+Unno" alt="Elevador Unno">
+                <img src="https://via.placeholder.com/600x400/004D99/FFFFFF?text=Elevador+Unno" alt="Elevador Unno">
                 <div class="product-card-content">
                     <h3>Elevador Unno</h3>
                     <p>Design limpo e elegante, perfeito para integrar-se à arquitetura de residências modernas. Capacidade de 375kg, curso até 9m. Operação suave e silenciosa.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Ver Detalhes & Baixar Lâmina</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/0A3D62/FFFFFF?text=Elevador+Unique" alt="Elevador Unique">
+                <img src="https://via.placeholder.com/600x400/004D99/FFFFFF?text=Elevador+Unique" alt="Elevador Unique">
                 <div class="product-card-content">
                     <h3>Elevador Unique</h3>
                     <p>Acabamento de alto padrão com opção de cabine panorâmica, oferecendo uma experiência de luxo. Solução exclusiva para quem busca sofisticação e conforto.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Ver Detalhes & Baixar Lâmina</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/0A3D62/FFFFFF?text=Elevador+EH01" alt="Elevador EH01 Linnea">
+                <img src="https://via.placeholder.com/600x400/004D99/FFFFFF?text=Elevador+EH01" alt="Elevador EH01 Linnea">
                 <div class="product-card-content">
                     <h3>Elevador EH01 Linnea</h3>
                     <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência para o tráfego diário.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Ver Detalhes & Baixar Lâmina</a>
                 </div>
             </div>
         </div>
@@ -422,7 +423,7 @@
                 <option value="Plataforma AC11">Plataforma AC11</option>
                 <option value="Elevador Unno">Elevador Unno</option>
                 <option value="Elevador Unique">Elevador Unique</option>
-                <option value="Elevador EH01">Elevador EH01 Linnea</option>
+                <option value="Elevador EH01 Linnea">Elevador EH01 Linnea</option>
                 <option value="Outro/Não tenho certeza">Outro/Não tenho certeza</option>
             </select>
 
@@ -434,12 +435,11 @@
     </section>
 
     <footer>
-        <p>Mob Advanced - Revendedor autorizado Daiken Elevadores</p>
+        <p>Mob Elevadores - Revendedor autorizado Daiken Elevadores</p>
         <p><strong>Atendimento Especializado em Brasília e em todo o Brasil.</strong></p>
-        <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobadvanced.com.br</p>
-        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobadvanced" target="_blank" style="color: white; text-decoration: none;">@mobadvanced</a></p>
+        <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobelevadores.com.br</p>
+        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobelevadores" target="_blank" style="color: white; text-decoration: none;">@mobelevadores</a></p>
     </footer>
 
 </body>
 </html>
-
