@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            /* Cores EXATAS da sua logo Mob Advanced */
-            --mob-azul-fundo: #2C4A66; /* Azul Escuro da logo - AQUI FOI MUDADO! */ 
-            --mob-laranja: #EF4A2E;   
-            --mob-branco: #FFFFFF;   
+            --mob-azul-fundo: #2C4A66;
+            --mob-laranja: #EF4A2E;
+            --mob-branco: #FFFFFF;
             
-            /* Cores auxiliares, derivadas ou neutras */
-            --mob-azul-claro: #4C6A89; /* Um tom um pouco mais claro do azul principal */
-            --texto-escuro-geral: #333333; /* Para textos que não ficam em fundos escuros */
-            --bg-neutro: #F0F4F7; /* Fundo de seções e corpo - MANTIDO como você enviou */
+            --mob-azul-claro: #4C6A89;
+            --texto-escuro-geral: #333333;
+            --bg-neutro: #F8F8F8;
             --shadow-light: rgba(0,0,0,0.08);
             --shadow-medium: rgba(0,0,0,0.12);
         }
@@ -28,29 +26,29 @@
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--bg-neutro); /* Fundo geral do site */
+            background: var(--bg-neutro);
             color: var(--texto-escuro-geral);
             line-height: 1.6;
         }
 
         header {
-            background: var(--mob-azul-fundo); /* Fundo do cabeçalho com o azul da logo */
+            background: var(--mob-azul-fundo);
             padding: 2.5em 1.5em;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            color: var(--mob-branco); /* Texto do cabeçalho em branco */
+            color: var(--mob-branco);
         }
 
         header .hero-content {
             z-index: 2;
             position: relative;
-            padding: 0; 
+            padding: 0;
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 3em; 
+            font-size: 3em;
             margin-bottom: 0.1em;
             color: var(--mob-branco);
             display: flex;
@@ -60,7 +58,7 @@
         }
         
         header h1 img.header-logo {
-            max-width: 250px; 
+            max-width: 250px;
             height: auto;
             vertical-align: middle;
             margin-bottom: 0;
@@ -76,13 +74,13 @@
         }
 
         .button {
-            background: var(--mob-laranja); 
+            background: var(--mob-laranja);
             color: var(--mob-branco);
             padding: 1em 2.2em;
             border: none;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 700; 
+            font-weight: 700;
             display: inline-block;
             margin: 0.8em 0.5em;
             transition: background 0.3s ease, transform 0.2s ease;
@@ -91,24 +89,24 @@
         }
 
         .button:hover {
-            background: #d94519; 
+            background: #d94519;
             transform: translateY(-2px);
         }
 
         .button.secondary {
-            background: var(--mob-azul-claro); 
+            background: var(--mob-azul-claro);
             color: var(--mob-branco);
         }
 
         .button.secondary:hover {
-            background: #3e5a7a; 
+            background: #3e5a7a;
         }
 
         section {
             padding: 4em 1.5em;
             max-width: 1200px;
             margin: 2em auto;
-            background: var(--mob-branco); 
+            background: var(--mob-branco);
             border-radius: 12px;
             box-shadow: 0 6px 15px var(--shadow-light);
             text-align: center;
@@ -116,14 +114,14 @@
 
         h2, h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--mob-azul-fundo); 
+            color: var(--mob-azul-fundo);
             font-weight: 700;
             margin-bottom: 1em;
         }
 
         h2 {
             font-size: 2.6em;
-            border-bottom: 3px solid var(--mob-laranja); 
+            border-bottom: 3px solid var(--mob-laranja);
             padding-bottom: 0.5em;
             display: inline-block;
         }
@@ -160,7 +158,7 @@
             height: 250px;
             object-fit: cover;
             display: block;
-            border-bottom: 1px solid #eee; 
+            border-bottom: 1px solid #eee;
         }
 
         .product-card-content {
@@ -168,19 +166,19 @@
         }
 
         .product-card-content h3 {
-            color: var(--mob-azul-fundo); 
+            color: var(--mob-azul-fundo);
             margin-bottom: 0.5em;
             font-size: 1.4em;
         }
 
         .product-card-content p {
             font-size: 0.95em;
-            color: var(--texto-escuro-geral); 
+            color: var(--texto-escuro-geral);
             margin-bottom: 1em;
         }
 
         .product-card-content .button {
-            width: calc(100% - 3em); 
+            width: calc(100% - 3em);
             text-align: center;
             display: block;
             margin: 0;
@@ -188,7 +186,7 @@
         }
 
         .cta-banner {
-            background: linear-gradient(135deg, var(--mob-azul-fundo) 0%, #3e5a7a 100%); 
+            background: linear-gradient(135deg, var(--mob-azul-fundo) 0%, #3e5a7a 100%);
             color: var(--mob-branco);
             padding: 3em 1.5em;
             text-align: center;
@@ -198,7 +196,7 @@
         }
 
         .cta-banner h2 {
-            color: var(--mob-branco); 
+            color: var(--mob-branco);
             font-size: 2.5em;
             margin-bottom: 0.5em;
             border-bottom: none;
@@ -214,12 +212,12 @@
         }
         
         .cta-banner .button {
-            background: var(--mob-laranja); 
+            background: var(--mob-laranja);
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .cta-banner .button:hover {
-            background: #d94519; 
+            background: #d94519;
         }
 
         #orcamento form {
@@ -242,26 +240,26 @@
             padding: 1em;
             border-radius: 8px;
             border: 1px solid #ccc;
-            width: calc(100% - 2em); 
+            width: calc(100% - 2em);
             font-size: 1em;
             transition: border-color 0.3s ease;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: var(--mob-laranja); 
-            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.25); 
+            border-color: var(--mob-laranja);
+            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.25);
         }
 
         label {
             font-weight: 600;
-            color: var(--mob-azul-fundo); 
-            display: block; 
+            color: var(--mob-azul-fundo);
+            display: block;
             margin-bottom: 0.5em;
         }
 
         footer {
-            background: var(--mob-azul-fundo); 
+            background: var(--mob-azul-fundo);
             color: var(--mob-branco);
             padding: 2.5em;
             text-align: center;
@@ -271,11 +269,11 @@
 
         footer p {
             margin: 0.5em 0;
-            color: rgba(255, 255, 255, 0.9); 
+            color: rgba(255, 255, 255, 0.9);
         }
 
         footer a {
-            color: var(--mob-branco); 
+            color: var(--mob-branco);
             text-decoration: none;
         }
 
@@ -287,7 +285,7 @@
                 font-size: 1.1em;
             }
             .product-grid {
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr;
             }
             section {
                 padding: 3em 1em;
@@ -303,32 +301,32 @@
                 font-size: 1.2em;
             }
             .product-card img {
-                height: 200px; 
+                height: 200px;
             }
         }
 
         .whatsapp-float {
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            background-color: var(--mob-laranja); 
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--mob-laranja);
             color: var(--mob-branco);
-            border-radius: 50%; 
-            width: 60px; 
-            height: 60px; 
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2em; 
+            font-size: 2em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000; 
-            text-decoration: none; 
+            z-index: 1000;
+            text-decoration: none;
             transition: transform 0.3s ease;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1); 
-            background-color: #d94519; 
+            transform: scale(1.1);
+            background-color: #d94519;
         }
 
         @media (max-width: 768px) {
