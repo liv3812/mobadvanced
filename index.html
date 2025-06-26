@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            /* Cores EXATAS da sua logo Mob Advanced */
-            --mob-azul-fundo: #2C4A66; 
-            --mob-laranja: #EF4A2E; 
-            --mob-branco: #FFFFFF; 
+            /* Cores EXATAS da sua logo Mob Advanced (ajustadas a partir do input fornecido) */
+            --mob-azul-fundo: #2C4A66; /* Azul escuro da logo */
+            --mob-laranja: #EF4A2E;   /* Laranja da logo */
+            --mob-branco: #FFFFFF;   /* Branco */
             
             /* Cores auxiliares, derivadas ou neutras */
             --mob-azul-claro: #4C6A89; /* Um tom um pouco mais claro do azul principal */
@@ -42,7 +42,7 @@
         }
 
         header .hero-content {
-            z-index: 2; 
+            z-index: 2; /* Para o texto ficar acima de qualquer imagem de fundo */
             position: relative;
             padding: 0; /* Ajustado para melhor espaçamento com o padding do header */
         }
@@ -50,7 +50,7 @@
         header h1 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 3em; 
+            font-size: 3em; /* Ajustado um pouco para dar mais destaque */
             margin-bottom: 0.1em;
             color: var(--mob-branco);
             /* Estilo para garantir que o texto (se houver) e a imagem fiquem bem alinhados */
@@ -61,7 +61,7 @@
         }
         
         /* Estilo específico para a imagem da logo dentro do h1 */
-        header h1 img {
+        header h1 img.header-logo {
             max-width: 250px; /* Tamanho máximo da logo */
             height: auto; /* Mantém a proporção */
             vertical-align: middle; /* Alinha verticalmente com o texto, se houver */
@@ -80,11 +80,11 @@
         .button {
             background: var(--mob-laranja); /* Botões de ação principais em laranja */
             color: var(--mob-branco);
-            padding: 1em 2.2em; 
+            padding: 1em 2.2em; /* Padding maior para botões mais robustos */
             border: none;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 700; 
+            font-weight: 700; /* Negrito para botões */
             display: inline-block;
             margin: 0.8em 0.5em;
             transition: background 0.3s ease, transform 0.2s ease;
@@ -124,7 +124,7 @@
         }
 
         h2 {
-            font-size: 2.6em;
+            font-size: 2.6em; /* Ajustado um pouco maior para destaque */
             border-bottom: 3px solid var(--mob-laranja); /* Linha de destaque em laranja da logo */
             padding-bottom: 0.5em;
             display: inline-block;
@@ -182,7 +182,7 @@
         }
 
         .product-card-content .button {
-            width: calc(100% - 3em); 
+            width: calc(100% - 3em); /* Ajusta a largura do botão ao card, considerando o padding */
             text-align: center;
             display: block;
             margin: 0;
@@ -244,7 +244,7 @@
             padding: 1em;
             border-radius: 8px;
             border: 1px solid #ccc;
-            width: calc(100% - 2em); 
+            width: calc(100% - 2em); /* Ajusta a largura para o padding */
             font-size: 1em;
             transition: border-color 0.3s ease;
         }
@@ -258,7 +258,7 @@
         label {
             font-weight: 600;
             color: var(--mob-azul-fundo); /* Labels em azul da logo */
-            display: block; 
+            display: block; /* Garante que o label ocupe sua própria linha */
             margin-bottom: 0.5em;
         }
 
@@ -281,6 +281,7 @@
             text-decoration: none;
         }
 
+        /* Media Queries para Responsividade */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.4em;
@@ -288,219 +289,3 @@
             header p {
                 font-size: 1.1em;
             }
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-            section {
-                padding: 3em 1em;
-                margin: 1.5em auto;
-            }
-            h2 {
-                font-size: 2.2em;
-            }
-            .cta-banner h2 {
-                font-size: 2em;
-            }
-            .cta-banner p {
-                font-size: 1.2em;
-            }
-            .product-card img {
-                height: 200px; 
-            }
-        }
-
-        /* Estilo para o botão flutuante do WhatsApp */
-        .whatsapp-float {
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            background-color: var(--mob-laranja); /* Cor do botão WhatsApp com o laranja da logo */
-            color: var(--mob-branco);
-            border-radius: 50%; 
-            width: 60px; 
-            height: 60px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000; 
-            text-decoration: none; 
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1); 
-            background-color: #d94519; /* Laranja mais escuro no hover */
-        }
-
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 1.7em;
-                bottom: 15px;
-                right: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="hero-content">
-            <h1>
-                <img src="img/mob-advanced-logo.png" alt="Logo Mob Advanced" class="header-logo">
-                </h1>
-            <p>Sua jornada para o alto começa aqui: Elevadores e Plataformas Daiken com o **Melhor Preço do Brasil**.</p>
-            <p>Atendimento completo em Brasília e para **todo o território nacional**.</p>
-            <a href="#orcamento" class="button">Solicite um Orçamento Grátis</a>
-            <a href="#produtos" class="button secondary">Conheça Nossos Produtos</a>
-        </div>
-    </header>
-
-    <section id="sobre">
-        <h2>Por que escolher a Mob Advanced?</h2>
-        <p>Somos especialistas em soluções de elevação, unindo a **expertise da Mob Advanced** em instalação e manutenção com a **qualidade e inovação dos produtos Daiken Elevadores**.</p>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-card-content">
-                    <h3>Melhor Custo-Benefício</h3>
-                    <p>Oferecemos o melhor preço do mercado sem abrir mão da qualidade e segurança que seu projeto merece.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-card-content">
-                    <h3>Atendimento Nacional</h3>
-                    <p>Seja em Brasília ou em qualquer canto do Brasil, levamos a solução de elevação ideal até você.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-card-content">
-                    <h3>Qualidade Daiken</h3>
-                    <p>Trabalhamos com equipamentos Daiken, sinônimo de tecnologia avançada, durabilidade e desempenho superior.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-card-content">
-                    <h3>Especialistas em Instalação</h3>
-                    <p>Nossa equipe técnica altamente qualificada garante uma instalação segura e dentro dos mais altos padrões.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="produtos">
-        <h2>Nossos Produtos em Destaque</h2>
-
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Plataforma+AC02" alt="Plataforma AC02">
-                <div class="product-card-content">
-                    <h3>Plataforma AC02</h3>
-                    <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg. Perfeita para acessibilidade discreta.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Plataforma+AC08" alt="Plataforma AC08">
-                <div class="product-card-content">
-                    <h3>Plataforma AC08</h3>
-                    <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg. Segurança e elegância em um só produto.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Plataforma+AC11" alt="Plataforma AC11">
-                <div class="product-card-content">
-                    <h3>Plataforma AC11</h3>
-                    <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, projetada para acessibilidade universal em espaços públicos e privados.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+Unno" alt="Elevador Unno">
-                <div class="product-card-content">
-                    <h3>Elevador Unno</h3>
-                    <p>Design limpo e elegante, perfeito para integrar-se à arquitetura de residências modernas. Capacidade de 375kg, curso até 9m. Operação suave e silenciosa.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+Unique" alt="Elevador Unique">
-                <div class="product-card-content">
-                    <h3>Elevador Unique</h3>
-                    <p>Acabamento de alto padrão com opção de cabine panorâmica, oferecendo uma experiência de luxo. Solução exclusiva para quem busca sofisticação e conforto.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+EH01" alt="Elevador EH01 Linnea">
-                <div class="product-card-content">
-                    <h3>Elevador EH01 Linnea</h3>
-                    <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência para o tráfego diário.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="cta-banner">
-        <h2>Pronto para Elevar Seu Projeto?</h2>
-        <p>Receba uma consultoria especializada e um orçamento sem compromisso para o seu elevador ou plataforma.</p>
-        <a href="#orcamento" class="button">Solicitar Orçamento Agora!</a>
-    </div>
-
-    <section id="orcamento">
-        <h2>Solicite Seu Orçamento Personalizado</h2>
-        <p>Preencha os dados abaixo e entraremos em contato o mais breve possível para entender suas necessidades.</p>
-        <form>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-
-            <label for="whatsapp">WhatsApp (com DDD):</label>
-            <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" placeholder="Ex: 61987654321" required>
-
-            <label for="cidade">Cidade/UF:</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Ex: Brasília/DF ou São Paulo/SP" required>
-
-            <label for="produto">Produto de Interesse:</label>
-            <select id="produto" name="produto">
-                <option value="" disabled selected>Selecione um produto</option>
-                <option value="Plataforma AC02">Plataforma AC02</option>
-                <option value="Plataforma AC08">Plataforma AC08</option>
-                <option value="Plataforma AC11">Plataforma AC11</option>
-                <option value="Elevador Unno">Elevador Unno</option>
-                <option value="Elevador Unique">Elevador Unique</option>
-                <option value="Elevador EH01 Linnea">Elevador EH01 Linnea</option>
-                <option value="Outro/Não tenho certeza">Outro/Não tenho certeza</option>
-            </select>
-
-            <label for="mensagem">Detalhes Adicionais (opcional):</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos mais sobre seu projeto ou dúvidas."></textarea>
-
-            <button type="submit" class="button secondary">Enviar Solicitação</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>Mob Advanced - Revendedor autorizado Daiken Elevadores</p>
-        <p><strong>Atendimento Especializado em Brasília e em todo o Brasil.</strong></p>
-        <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobadvanced.com.br</p>
-        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobadvanced" target="_blank" style="color: white; text-decoration: none;">@mobadvanced</a></p>
-    </footer>
-
-    <a href="https://wa.me/55619XXXXXXXX" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-</body>
-</html>
