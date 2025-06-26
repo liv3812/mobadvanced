@@ -35,16 +35,40 @@
           }
  
 
-      <header>
-  <div class="hero-content">
-    <img src="https://i.imgur.com/8UrTCee.png" alt="Mob Advanced" style="max-width: 260px; height: auto; margin-bottom: 0.5em;">
-    <p>Sua jornada para o alto começa aqui: Elevadores e Plataformas Daiken com o <strong>Melhor Preço do Brasil</strong>.</p>
-    <p>Atendimento completo em Brasília e para <strong>todo o território nacional</strong>.</p>
-    <a href="#orcamento" class="button">Solicite um Orçamento Grátis</a>
-    <a href="#produtos" class="button secondary">Conheça Nossos Produtos</a>
-  </div>
-</header>
+      header {
+              background: var(--mob-azul-fundo); /* Fundo do cabeçalho com o azul da logo */
+              padding: 2.5em 1.5em;
+              text-align: center;
+              box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+              color: var(--mob-branco); /* Texto do cabeçalho em branco */
+          }
+ 
 
+      header .hero-content {
+              z-index: 2; 
+              position: relative;
+              padding: 0; /* Ajustado para melhor espaçamento com o padding do header */
+          }
+ 
+
+      header h1 {
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 700;
+              font-size: 3em; 
+              margin-bottom: 0.1em;
+              color: var(--mob-branco);
+          }
+ 
+
+      header p {
+              font-size: 1.2em;
+              margin-top: 0;
+              color: rgba(255, 255, 255, 0.9); /* Branco ligeiramente transparente */
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+ 
 
       .button {
               background: var(--mob-laranja); /* Botões de ação principais em laranja */
