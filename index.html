@@ -4,88 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Venda e instalação de elevadores residenciais, comerciais e plataformas de acessibilidade Daiken com o melhor preço do Brasil. Atendimento completo em Brasília e para todo o território nacional. Qualidade, segurança e design para seu projeto.">
-    <title>Mob Elevadores - Elevadores e Plataformas Daiken | Melhor Preço Brasil</title>
+    <title>Mob Advanced - Elevadores e Plataformas Daiken | Melhor Preço Brasil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --primary-color: #004080; /* Azul Marinho mais escuro para títulos e rodapé */
-            --secondary-color: #0071C5; /* Azul Médio mais vibrante para botões e detalhes */
-            --accent-color: #E03C31; /* Vermelho vibrante para destaque/ações principais */
-            --text-dark: #333333;
-            --text-light: #f8f9fa; /* Cor clara para texto em fundos escuros */
-            --bg-light: #F0F4F7; /* Fundo geral mais claro */
-            --bg-white: #ffffff;
+            /* Cores EXATAS da sua logo Mob Advanced */
+            --mob-azul-fundo: #2C4A66; /* Azul Escuro da logo - AQUI FOI MUDADO! */ 
+            --mob-laranja: #EF4A2E;   
+            --mob-branco: #FFFFFF;   
+            
+            /* Cores auxiliares, derivadas ou neutras */
+            --mob-azul-claro: #4C6A89; /* Um tom um pouco mais claro do azul principal */
+            --texto-escuro-geral: #333333; /* Para textos que não ficam em fundos escuros */
+            --bg-neutro: #F0F4F7; /* Fundo de seções e corpo - MANTIDO como você enviou */
             --shadow-light: rgba(0,0,0,0.08);
             --shadow-medium: rgba(0,0,0,0.12);
-
-            /* NOVA COR DA LOGO PARA O FUNDO DO HEADER */
-            --mob-azul-fundo: #1E354A;
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--bg-light);
-            color: var(--text-dark);
+            background: var(--bg-neutro); /* Fundo geral do site */
+            color: var(--texto-escuro-geral);
             line-height: 1.6;
         }
 
         header {
-            /* ALTERADO: Fundo do header agora é a cor da sua logo */
-            background: var(--mob-azul-fundo); 
-            padding: 1.5em 1.5em;
+            background: var(--mob-azul-fundo); /* Fundo do cabeçalho com o azul da logo */
+            padding: 2.5em 1.5em;
             text-align: center;
-            box-shadow: 0 4px 8px var(--shadow-light);
-            position: relative;
-            overflow: hidden;
-            /* Cor do texto geral no header (será sobrescrita para h1 e p) */
-            color: var(--text-light); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            color: var(--mob-branco); /* Texto do cabeçalho em branco */
         }
 
         header .hero-content {
             z-index: 2;
             position: relative;
-            padding: 2em 0;
+            padding: 0; 
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 2.8em;
+            font-size: 3em; 
             margin-bottom: 0.1em;
-            /* ALTERADO: Cor do título/logo no header agora é clara */
-            color: var(--text-light); 
+            color: var(--mob-branco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
-        /* Estilo para a imagem da logo dentro do h1 */
-        header h1 img {
-            max-height: 80px; /* Ajuste conforme necessário */
-            width: auto;
-            vertical-align: middle; /* Ajuda a alinhar a imagem */
+        header h1 img.header-logo {
+            max-width: 250px; 
+            height: auto;
+            vertical-align: middle;
+            margin-bottom: 0;
         }
-
 
         header p {
             font-size: 1.2em;
             margin-top: 0;
-            /* ALTERADO: Cor do parágrafo no header agora é clara */
-            color: var(--text-light); 
+            color: rgba(255, 255, 255, 0.9);
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .button {
-            background: var(--secondary-color);
-            color: var(--text-light);
-            padding: 0.9em 1.8em;
+            background: var(--mob-laranja); 
+            color: var(--mob-branco);
+            padding: 1em 2.2em;
             border: none;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700; 
             display: inline-block;
             margin: 0.8em 0.5em;
             transition: background 0.3s ease, transform 0.2s ease;
@@ -94,26 +91,24 @@
         }
 
         .button:hover {
-            background: #0056b3; /* Tom mais escuro no hover para secondary-color */
+            background: #d94519; 
             transform: translateY(-2px);
         }
 
         .button.secondary {
-            /* ALTERADO: Para o botão secundário, usaremos o secondary-color (mais claro)
-               assim ele contrasta bem no novo fundo escuro do header. */
-            background: var(--secondary-color); 
-            border: 2px solid var(--text-light); /* Borda para destaque */
+            background: var(--mob-azul-claro); 
+            color: var(--mob-branco);
         }
+
         .button.secondary:hover {
-            background: #0056b3; /* Mantém o hover do secondary-color */
-            border-color: var(--text-light);
+            background: #3e5a7a; 
         }
 
         section {
             padding: 4em 1.5em;
             max-width: 1200px;
             margin: 2em auto;
-            background: var(--bg-white);
+            background: var(--mob-branco); 
             border-radius: 12px;
             box-shadow: 0 6px 15px var(--shadow-light);
             text-align: center;
@@ -121,14 +116,14 @@
 
         h2, h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color); /* Mantém o primary-color para títulos em seções claras */
+            color: var(--mob-azul-fundo); 
             font-weight: 700;
             margin-bottom: 1em;
         }
 
         h2 {
-            font-size: 2.2em;
-            border-bottom: 2px solid var(--secondary-color);
+            font-size: 2.6em;
+            border-bottom: 3px solid var(--mob-laranja); 
             padding-bottom: 0.5em;
             display: inline-block;
         }
@@ -146,7 +141,7 @@
         }
 
         .product-card {
-            background: var(--bg-white);
+            background: var(--mob-branco);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 12px var(--shadow-medium);
@@ -165,7 +160,7 @@
             height: 250px;
             object-fit: cover;
             display: block;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eee; 
         }
 
         .product-card-content {
@@ -173,19 +168,19 @@
         }
 
         .product-card-content h3 {
-            color: var(--primary-color);
+            color: var(--mob-azul-fundo); 
             margin-bottom: 0.5em;
             font-size: 1.4em;
         }
 
         .product-card-content p {
             font-size: 0.95em;
-            color: #666;
+            color: var(--texto-escuro-geral); 
             margin-bottom: 1em;
         }
 
         .product-card-content .button {
-            width: calc(100% - 3em);
+            width: calc(100% - 3em); 
             text-align: center;
             display: block;
             margin: 0;
@@ -193,9 +188,8 @@
         }
 
         .cta-banner {
-            /* ALTERADO: Gradiente usando primary-color e um tom mais escuro do secundário */
-            background: linear-gradient(135deg, var(--primary-color) 0%, #005ea8 100%); 
-            color: var(--text-light);
+            background: linear-gradient(135deg, var(--mob-azul-fundo) 0%, #3e5a7a 100%); 
+            color: var(--mob-branco);
             padding: 3em 1.5em;
             text-align: center;
             margin: 2em auto;
@@ -204,7 +198,7 @@
         }
 
         .cta-banner h2 {
-            color: var(--text-light);
+            color: var(--mob-branco); 
             font-size: 2.5em;
             margin-bottom: 0.5em;
             border-bottom: none;
@@ -220,12 +214,12 @@
         }
         
         .cta-banner .button {
-            background: var(--accent-color); /* Botão da CTA com a cor de destaque */
+            background: var(--mob-laranja); 
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .cta-banner .button:hover {
-            background: #bb2e26; /* Hover mais escuro para a accent-color */
+            background: #d94519; 
         }
 
         #orcamento form {
@@ -248,27 +242,27 @@
             padding: 1em;
             border-radius: 8px;
             border: 1px solid #ccc;
-            width: calc(100% - 2em);
+            width: calc(100% - 2em); 
             font-size: 1em;
             transition: border-color 0.3s ease;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(0, 113, 197, 0.25);
+            border-color: var(--mob-laranja); 
+            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.25); 
         }
 
         label {
             font-weight: 600;
-            color: var(--primary-color);
-            display: block;
+            color: var(--mob-azul-fundo); 
+            display: block; 
             margin-bottom: 0.5em;
         }
 
         footer {
-            background: var(--primary-color);
-            color: var(--text-light);
+            background: var(--mob-azul-fundo); 
+            color: var(--mob-branco);
             padding: 2.5em;
             text-align: center;
             font-size: 0.9em;
@@ -277,33 +271,73 @@
 
         footer p {
             margin: 0.5em 0;
+            color: rgba(255, 255, 255, 0.9); 
+        }
+
+        footer a {
+            color: var(--mob-branco); 
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.2em;
+                font-size: 2.4em;
             }
             header p {
-                font-size: 1em;
+                font-size: 1.1em;
             }
             .product-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; 
             }
             section {
-                padding: 2.5em 1em;
+                padding: 3em 1em;
                 margin: 1.5em auto;
             }
             h2 {
-                font-size: 1.8em;
+                font-size: 2.2em;
             }
             .cta-banner h2 {
                 font-size: 2em;
             }
             .cta-banner p {
-                font-size: 1.1em;
+                font-size: 1.2em;
             }
             .product-card img {
-                height: 200px;
+                height: 200px; 
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background-color: var(--mob-laranja); 
+            color: var(--mob-branco);
+            border-radius: 50%; 
+            width: 60px; 
+            height: 60px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; 
+            text-decoration: none; 
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1); 
+            background-color: #d94519; 
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.7em;
+                bottom: 15px;
+                right: 15px;
             }
         }
     </style>
@@ -313,7 +347,7 @@
     <header>
         <div class="hero-content">
             <h1>
-                <img src="URL_DA_SUA_LOGO_AQUI.png" alt="Mob Elevadores Logo">
+                <img src="https://i.imgur.com/8UrTCee.png" alt="Logo Mob Advanced" class="header-logo">
             </h1>
             <p>Sua jornada para o alto começa aqui: Elevadores e Plataformas Daiken com o **Melhor Preço do Brasil**.</p>
             <p>Atendimento completo em Brasília e para **todo o território nacional**.</p>
@@ -323,8 +357,8 @@
     </header>
 
     <section id="sobre">
-        <h2>Por que escolher a Mob Elevadores?</h2>
-        <p>Somos especialistas em soluções de elevação, unindo a **expertise da Mob Elevadores** em instalação e manutenção com a **qualidade e inovação dos produtos Daiken Elevadores**.</p>
+        <h2>Por que escolher a Mob Advanced?</h2>
+        <p>Somos especialistas em soluções de elevação, unindo a **expertise da Mob Advanced** em instalação e manutenção com a **qualidade e inovação dos produtos Daiken Elevadores**.</p>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-card-content">
@@ -358,7 +392,7 @@
 
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/1E354A/FFFFFF?text=Plataforma+AC02" alt="Plataforma AC02">
+                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Plataforma+AC02" alt="Plataforma AC02">
                 <div class="product-card-content">
                     <h3>Plataforma AC02</h3>
                     <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg. Perfeita para acessibilidade discreta.</p>
@@ -367,7 +401,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/1E354A/FFFFFF?text=Plataforma+AC08" alt="Plataforma AC08">
+                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Plataforma+AC08" alt="Plataforma AC08">
                 <div class="product-card-content">
                     <h3>Plataforma AC08</h3>
                     <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg. Segurança e elegância em um só produto.</p>
@@ -376,7 +410,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/1E354A/FFFFFF?text=Plataforma+AC11" alt="Plataforma AC11">
+                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Plataforma+AC11" alt="Plataforma AC11">
                 <div class="product-card-content">
                     <h3>Plataforma AC11</h3>
                     <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, projetada para acessibilidade universal em espaços públicos e privados.</p>
@@ -385,7 +419,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/1E354A/FFFFFF?text=Elevador+Unno" alt="Elevador Unno">
+                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+Unno" alt="Elevador Unno">
                 <div class="product-card-content">
                     <h3>Elevador Unno</h3>
                     <p>Design limpo e elegante, perfeito para integrar-se à arquitetura de residências modernas. Capacidade de 375kg, curso até 9m. Operação suave e silenciosa.</p>
@@ -394,7 +428,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/1E354A/FFFFFF?text=Elevador+Unique" alt="Elevador Unique">
+                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+Unique" alt="Elevador Unique">
                 <div class="product-card-content">
                     <h3>Elevador Unique</h3>
                     <p>Acabamento de alto padrão com opção de cabine panorâmica, oferecendo uma experiência de luxo. Solução exclusiva para quem busca sofisticação e conforto.</p>
@@ -403,7 +437,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/600x400/1E354A/FFFFFF?text=Elevador+EH01" alt="Elevador EH01 Linnea">
+                <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+EH01" alt="Elevador EH01 Linnea">
                 <div class="product-card-content">
                     <h3>Elevador EH01 Linnea</h3>
                     <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência para o tráfego diário.</p>
@@ -443,7 +477,7 @@
                 <option value="Plataforma AC11">Plataforma AC11</option>
                 <option value="Elevador Unno">Elevador Unno</option>
                 <option value="Elevador Unique">Elevador Unique</option>
-                <option value="Elevador EH01">Elevador EH01 Linnea</option>
+                <option value="Elevador EH01 Linnea">Elevador EH01 Linnea</option>
                 <option value="Outro/Não tenho certeza">Outro/Não tenho certeza</option>
             </select>
 
@@ -455,11 +489,15 @@
     </section>
 
     <footer>
-        <p>Mob Elevadores - Revendedor autorizado Daiken Elevadores</p>
+        <p>Mob Advanced - Revendedor autorizado Daiken Elevadores</p>
         <p><strong>Atendimento Especializado em Brasília e em todo o Brasil.</strong></p>
-        <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobelevadores.com.br</p>
-        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobelevadores" target="_blank" style="color: white; text-decoration: none;">@mobelevadores</a></p>
+        <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobadvanced.com.br</p>
+        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobadvanced" target="_blank">@mobadvanced</a></p>
     </footer>
+
+    <a href="https://wa.me/55619XXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
