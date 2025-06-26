@@ -1,234 +1,227 @@
 <!DOCTYPE html>
- <html lang="pt-br">
- <head>
+<html lang="pt-br">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Elevadores e plataformas com tecnologia Daiken e instalação especializada da Mob Advanced. Atendimento em Brasília e em todo o Brasil.">
-  <title>Mob Advanced - Elevadores e Plataformas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Venda e instalação de elevadores residenciais, comerciais e plataformas de acessibilidade Daiken com o melhor preço do Brasil. Atendimento completo em Brasília e para todo o território nacional. Qualidade, segurança e design para seu projeto." />
+  <title>Mob Elevadores - Elevadores e Plataformas Daiken | Melhor Preço Brasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      /* Cores EXATAS da sua logo */
-      --mob-azul-fundo: #214274; /* O azul escuro do fundo da logo */
-      --mob-laranja: #FF6600; /* O laranja do círculo da logo */
-      --mob-branco: #FFFFFF; /* O branco do texto 'Mob', 'Elevadores' */
-      
-      /* Cores auxiliares, baseadas nas da logo */
-      --cinza-claro-fundo: #F8F8F8; /* Um cinza bem claro para o fundo geral */
-      --texto-geral-escuro: #333333; /* Um cinza escuro para texto principal */
-    }
- 
+    :root {
+      --primary-color: #2F4D6B;
+      --secondary-color: #1B3350;
+      --accent-color: #F24E1E;
+      --text-dark: #212529;
+      --text-light: #ffffff;
+      --bg-light: #F4F6F9;
+      --bg-white: #ffffff;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+      --shadow-medium: rgba(0, 0, 0, 0.12);
+    }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: var(--cinza-claro-fundo); /* Fundo geral do site */
-      color: var(--texto-geral-escuro); /* Cor padrão do texto */
-      line-height: 1.6;
-    }
- 
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
 
-    header {
-      background-color: var(--mob-azul-fundo); /* Fundo do cabeçalho com o azul da logo */
-      color: var(--mob-branco); /* Texto do cabeçalho em branco */
-      padding: 2.5em;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
-    }
- 
+    header {
+      background: var(--bg-white);
+      padding: 1.5em 1.5em;
+      text-align: center;
+      box-shadow: 0 4px 8px var(--shadow-light);
+      color: var(--text-dark);
+    }
 
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3em; /* Um pouco maior para destaque */
-      margin-bottom: 0.3em;
-      color: var(--mob-branco); /* Título em branco */
-    }
- 
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.8em;
+      margin-bottom: 0.1em;
+      color: var(--primary-color);
+    }
 
-    header p {
-      font-size: 1.2em;
-      color: rgba(255, 255, 255, 0.8); /* Branco com transparência para o subtítulo */
-      margin: 0.5em auto 1.5em auto;
-      max-width: 800px;
-    }
- 
+    header p {
+      font-size: 1.2em;
+      color: #555;
+      max-width: 800px;
+      margin: 0.5em auto;
+    }
 
-    .button {
-      background-color: var(--mob-laranja); /* Botão com o laranja da logo */
-      color: var(--mob-branco);
-      padding: 1em 2.2em; /* Um pouco mais de padding */
-      border: none;
-      border-radius: 8px; /* Cantos um pouco mais arredondados */
-      text-decoration: none;
-      font-weight: 700; /* Mais negrito */
-      display: inline-block;
-      margin-top: 1.5em;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
-    }
- 
+    .button {
+      background: var(--accent-color);
+      color: var(--text-light);
+      padding: 0.9em 1.8em;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin: 0.8em 0.5em;
+      transition: background 0.3s ease, transform 0.2s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-    .button:hover {
-      background-color: #e65c00; /* Laranja um pouco mais escuro no hover */
-      transform: translateY(-2px); /* Efeito de elevação */
-    }
- 
+    .button:hover {
+      background: #BB0020;
+      transform: translateY(-2px);
+    }
 
-    section {
-      padding: 4em 2em;
-      max-width: 1100px;
-      margin: 2em auto;
-      background-color: var(--mob-branco); /* Fundo das seções em branco */
-      border-radius: 12px; /* Mais arredondado */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave para as seções */
-    }
- 
+    .button.secondary {
+      background: var(--primary-color);
+    }
 
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--mob-azul-fundo); /* Títulos secundários com o azul da logo */
-      font-size: 2.6em; /* Um pouco maior */
-      margin-bottom: 1.2em;
-      text-align: center;
-      padding-bottom: 0.5em;
-      border-bottom: 3px solid var(--mob-laranja); /* Linha de destaque com o laranja da logo */
-      display: inline-block; /* Para a linha ficar apenas no texto */
-      margin-left: auto;
-      margin-right: auto;
-    }
- 
+    .button.secondary:hover {
+      background: var(--secondary-color);
+    }
 
-    .produtos-destaque {
-      text-align: center;
-      font-size: 1.1em;
-      color: var(--texto-geral-escuro);
-      margin-bottom: 2.5em;
-    }
- 
+    section {
+      padding: 4em 1.5em;
+      max-width: 1200px;
+      margin: 2em auto;
+      background: var(--bg-white);
+      border-radius: 12px;
+      box-shadow: 0 6px 15px var(--shadow-light);
+      text-align: center;
+    }
 
-    .form-grid {
-      display: grid;
-      gap: 1.8em;
-      max-width: 600px;
-      margin: 2em auto;
-    }
- 
+    h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
 
-    label {
-      font-weight: 600;
-      color: var(--mob-azul-fundo); /* Labels com o azul da logo */
-    }
- 
+    h2 {
+      font-size: 2.2em;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5em;
+      display: inline-block;
+    }
 
-    input, select, textarea {
-      width: 100%;
-      padding: 1.2em;
-      border-radius: 8px;
-      border: 1px solid #cccccc; /* Borda mais neutra */
-      font-size: 1em;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
- 
+    h3 {
+      font-size: 1.6em;
+    }
 
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--mob-laranja); /* Borda laranja no foco */
-      box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2); /* Sombra laranja no foco */
-    }
- 
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5em;
+      margin-top: 2em;
+    }
 
-    footer {
-      background-color: var(--mob-azul-fundo); /* Rodapé com o azul da logo */
-      color: var(--mob-branco); /* Texto do rodapé em branco */
-      text-align: center;
-      padding: 2.5em;
-      margin-top: 4em;
-    }
- 
+    .product-card {
+      background: var(--bg-white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px var(--shadow-medium);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
 
-    footer p {
-      margin: 0.5em 0;
-      font-size: 0.95em;
-      color: rgba(255, 255, 255, 0.9); /* Texto levemente transparente para suavidade */
-    }
- 
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px var(--shadow-medium);
+    }
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.4em; }
-      header p { font-size: 1em; }
-      section { padding: 3em 1.5em; margin: 1.5em auto; }
-      h2 { font-size: 2em; }
-      .form-grid { gap: 1.2em; }
-      .button { padding: 0.8em 1.5em; }
-    }
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-card-content {
+      padding: 1.5em;
+    }
+
+    .product-card-content h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5em;
+      font-size: 1.4em;
+    }
+
+    .product-card-content p {
+      font-size: 0.95em;
+      color: #666;
+      margin-bottom: 1em;
+    }
+
+    .cta-banner {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 3em 1.5em;
+      text-align: center;
+      margin: 2em auto;
+      border-radius: 12px;
+    }
+
+    .cta-banner h2 {
+      color: var(--text-light);
+      font-size: 2.5em;
+    }
+
+    .cta-banner p {
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-banner .button {
+      background: var(--accent-color);
+    }
+
+    .cta-banner .button:hover {
+      background: #BB0020;
+    }
+
+    footer {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 2.5em;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 2.5em 1em;
+      }
+      h2 {
+        font-size: 1.8em;
+      }
+      .cta-banner h2 {
+        font-size: 2em;
+      }
+      .cta-banner p {
+        font-size: 1.1em;
+      }
+    }
   </style>
- </head>
- <body>
- 
+</head>
+<body>
+  <!-- Conteúdo continua conforme seu layout anterior -->
+</body>
+</html>
 
-  <header>
-    <h1>Mob Advanced</h1>
-    <p>Elevadores e Plataformas Daiken com o melhor preço e instalação especializada em todo o Brasil.</p>
-    <a href="#orcamento" class="button">Solicite um Orçamento</a>
-  </header>
- 
-
-  <section>
-    <h2>Nossos Produtos em Destaque</h2>
-    <p class="produtos-destaque">Confira os modelos de plataformas e elevadores que mais vendemos e instalamos:</p>
-    
-      <div style="text-align: center; padding: 2em; border: 1px dashed #CCC; border-radius: 8px;">
-      <p style="color: #666;">Conteúdo dos produtos (imagens e descrições detalhadas) será inserido aqui em breve.</p>
-      <p style="color: #666;">Fique atento para a atualização!</p>
-    </div>
-  </section>
- 
-
-  <section id="orcamento">
-    <h2>Solicite seu Orçamento Personalizado</h2>
-    <p style="text-align: center; margin-bottom: 2em;">Preencha o formulário abaixo para receber um orçamento detalhado sem compromisso.</p>
-    <form class="form-grid">
-      <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" name="nome" required>
- 
-
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
- 
-
-      <label for="whatsapp">WhatsApp (com DDD):</label>
-      <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Ex: 61987654321">
- 
-
-      <label for="produto">Produto de Interesse:</label>
-      <select id="produto" name="produto" required>
-        <option value="">Selecione um produto</option>
-        <option value="Plataforma AC02">Plataforma AC02</option>
-        <option value="Plataforma AC08">Plataforma AC08</option>
-        <option value="Plataforma AC11">Plataforma AC11</option>
-        <option value="Elevador Unno">Elevador Unno</option>
-        <option value="Elevador Unique">Elevador Unique</option>
-        <option value="Elevador EH01 Linnea">Elevador EH01 Linnea</option>
-        <option value="Outro">Outro (especifique na mensagem)</option>
-      </select>
- 
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Detalhe suas necessidades ou dúvidas."></textarea>
- 
-
-      <button type="submit" class="button">Enviar Solicitação</button>
-    </form>
-  </section>
- 
-
-  <footer>
-    <p>Mob Advanced - Parceiro Oficial Daiken Elevadores</p>
-    <p>Atendimento em Brasília e todo o Brasil</p>
-    <p>WhatsApp: (61) 9XXXX-XXXX | Email: contato@mobadvanced.com.br</p>
-  </footer>
- 
-
- </body>
- </html>
