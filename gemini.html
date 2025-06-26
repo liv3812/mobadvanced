@@ -8,11 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul-mob: #214274; /* Tom de azul mais próximo ao da logo */
-      --laranja-mob: #ff6600; /* Laranja da logo */
-      --branco: #ffffff;
-      --cinza-claro: #f4f4f4;
-      --texto-escuro: #333;
+      /* Cores EXATAS da sua logo */
+      --mob-azul-fundo: #214274; /* O azul escuro do fundo da logo */
+      --mob-laranja: #FF6600; /* O laranja do círculo da logo */
+      --mob-branco: #FFFFFF; /* O branco do texto 'Mob', 'Elevadores' */
+      
+      /* Cores auxiliares, baseadas nas da logo */
+      --cinza-claro-fundo: #F8F8F8; /* Um cinza bem claro para o fundo geral */
+      --texto-geral-escuro: #333333; /* Um cinza escuro para texto principal */
     }
  
 
@@ -20,52 +23,55 @@
       margin: 0;
       padding: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: var(--cinza-claro);
-      color: var(--texto-escuro);
+      background-color: var(--cinza-claro-fundo); /* Fundo geral do site */
+      color: var(--texto-geral-escuro); /* Cor padrão do texto */
       line-height: 1.6;
     }
  
 
     header {
-      background-color: var(--branco);
-      color: var(--azul-mob);
-      padding: 2em;
+      background-color: var(--mob-azul-fundo); /* Fundo do cabeçalho com o azul da logo */
+      color: var(--mob-branco); /* Texto do cabeçalho em branco */
+      padding: 2.5em;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
     }
  
 
     header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.8em;
+      font-size: 3em; /* Um pouco maior para destaque */
       margin-bottom: 0.3em;
+      color: var(--mob-branco); /* Título em branco */
     }
  
 
     header p {
-      font-size: 1.1em;
-      color: #555;
-      margin: 0.5em auto;
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.8); /* Branco com transparência para o subtítulo */
+      margin: 0.5em auto 1.5em auto;
       max-width: 800px;
     }
  
 
     .button {
-      background-color: var(--laranja-mob);
-      color: var(--branco);
-      padding: 0.9em 2em;
+      background-color: var(--mob-laranja); /* Botão com o laranja da logo */
+      color: var(--mob-branco);
+      padding: 1em 2.2em; /* Um pouco mais de padding */
       border: none;
-      border-radius: 8px;
+      border-radius: 8px; /* Cantos um pouco mais arredondados */
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700; /* Mais negrito */
       display: inline-block;
       margin-top: 1.5em;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
     }
  
 
     .button:hover {
-      background-color: #e05a00;
+      background-color: #e65c00; /* Laranja um pouco mais escuro no hover */
+      transform: translateY(-2px); /* Efeito de elevação */
     }
  
 
@@ -73,26 +79,31 @@
       padding: 4em 2em;
       max-width: 1100px;
       margin: 2em auto;
-      background-color: var(--branco);
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      background-color: var(--mob-branco); /* Fundo das seções em branco */
+      border-radius: 12px; /* Mais arredondado */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave para as seções */
     }
  
 
     h2 {
       font-family: 'Montserrat', sans-serif;
-      color: var(--azul-mob);
-      font-size: 2.4em;
+      color: var(--mob-azul-fundo); /* Títulos secundários com o azul da logo */
+      font-size: 2.6em; /* Um pouco maior */
       margin-bottom: 1.2em;
       text-align: center;
+      padding-bottom: 0.5em;
+      border-bottom: 3px solid var(--mob-laranja); /* Linha de destaque com o laranja da logo */
+      display: inline-block; /* Para a linha ficar apenas no texto */
+      margin-left: auto;
+      margin-right: auto;
     }
  
 
     .produtos-destaque {
       text-align: center;
       font-size: 1.1em;
-      color: #555;
-      margin-bottom: 2em;
+      color: var(--texto-geral-escuro);
+      margin-bottom: 2.5em;
     }
  
 
@@ -106,7 +117,7 @@
 
     label {
       font-weight: 600;
-      color: var(--azul-mob);
+      color: var(--mob-azul-fundo); /* Labels com o azul da logo */
     }
  
 
@@ -114,14 +125,22 @@
       width: 100%;
       padding: 1.2em;
       border-radius: 8px;
-      border: 1px solid #ccc;
+      border: 1px solid #cccccc; /* Borda mais neutra */
       font-size: 1em;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+ 
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--mob-laranja); /* Borda laranja no foco */
+      box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2); /* Sombra laranja no foco */
     }
  
 
     footer {
-      background-color: var(--azul-mob);
-      color: var(--branco);
+      background-color: var(--mob-azul-fundo); /* Rodapé com o azul da logo */
+      color: var(--mob-branco); /* Texto do rodapé em branco */
       text-align: center;
       padding: 2.5em;
       margin-top: 4em;
@@ -130,16 +149,18 @@
 
     footer p {
       margin: 0.5em 0;
-      font-size: 0.9em;
+      font-size: 0.95em;
+      color: rgba(255, 255, 255, 0.9); /* Texto levemente transparente para suavidade */
     }
  
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.4em; }
       header p { font-size: 1em; }
-      section { padding: 3em 1.5em; }
+      section { padding: 3em 1.5em; margin: 1.5em auto; }
       h2 { font-size: 2em; }
       .form-grid { gap: 1.2em; }
+      .button { padding: 0.8em 1.5em; }
     }
   </style>
  </head>
@@ -155,9 +176,11 @@
 
   <section>
     <h2>Nossos Produtos em Destaque</h2>
-    <p class="produtos-destaque">Confira os modelos de plataformas e elevadores que mais vendemos:</p>
-      <div style="text-align: center;">
-      <p>Em breve, apresentaremos nossos produtos em detalhes. Fique atento!</p>
+    <p class="produtos-destaque">Confira os modelos de plataformas e elevadores que mais vendemos e instalamos:</p>
+    
+      <div style="text-align: center; padding: 2em; border: 1px dashed #CCC; border-radius: 8px;">
+      <p style="color: #666;">Conteúdo dos produtos (imagens e descrições detalhadas) será inserido aqui em breve.</p>
+      <p style="color: #666;">Fique atento para a atualização!</p>
     </div>
   </section>
  
@@ -175,7 +198,7 @@
  
 
       <label for="whatsapp">WhatsApp (com DDD):</label>
-      <input type="tel" id="whatsapp" name="whatsapp" required>
+      <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Ex: 61987654321">
  
 
       <label for="produto">Produto de Interesse:</label>
@@ -192,7 +215,7 @@
  
 
       <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Detalhe suas necessidades ou dúvidas"></textarea>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Detalhe suas necessidades ou dúvidas."></textarea>
  
 
       <button type="submit" class="button">Enviar Solicitação</button>
