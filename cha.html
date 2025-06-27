@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chá Revelação - Vote!</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #bbdefb, #f8bbd0); /* Light blue to pink gradient */
+      font-family: 'Poppins', sans-serif; /* Modern font */
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    h1 {
+      font-size: 3rem; /* Larger heading */
+      margin-bottom: 25px;
+      color: #6a1b9a; /* Deep purple */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    }
+
+    .gif-duplo {
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* Increased gap */
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .gif-duplo img {
+      width: 250px; /* Slightly larger GIFs */
+      height: 250px; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensures image covers area without distortion */
+      border-radius: 15px; /* More rounded corners */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* More prominent shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gif-duplo img:hover {
+      transform: translateY(-8px) scale(1.02); /* Lift and slightly enlarge on hover */
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    }
+
+    /* Specific style for the first GIF's white background */
+    .gif-duplo img:first-child {
+      background-color: #ffffff; /* White background */
+      padding: 5px; /* Small padding to show white background */
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 50px; /* More space between vote cards */
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .vote-card {
+      background: #ffffff; /* White background for cards */
+      border-radius: 15px;
+      padding: 25px; /* More padding */
+      width: 200px; /* Slightly wider cards */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Soft shadow */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden; /* For pseudo-elements */
+    }
+
+    .vote-card:hover {
+      transform: translateY(-5px); /* Lift slightly on hover */
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .vote-card h2 {
+      margin: 10px 0 20px; /* Adjust margin */
+      font-size: 1.5rem; /* Larger text */
+      color: #6a1b9a; /* Deep purple */
+    }
+
+    .vote-card button {
+      padding: 12px 25px; /* Larger buttons */
+      border: none;
+      border-radius: 30px; /* Pill-shaped buttons */
+      font-size: 1.1rem; /* Larger font in buttons */
+      cursor: pointer;
+      transition: all 0.3s ease; /* Smooth transition for all properties */
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .boy-btn {
+      background-color: #64b5f6; /* Lighter blue */
+      color: #fff;
+    }
+
+    .boy-btn:hover {
+      background-color: #42a5f5; /* Darker blue on hover */
+      transform: scale(1.08) rotate(2deg); /* More dynamic hover */
+      box-shadow: 0 6px 15px rgba(66, 165, 245, 0.4);
+    }
+
+    .girl-btn {
+      background-color: #f48fb1; /* Lighter pink */
+      color: #fff;
+    }
+
+    .girl-btn:hover {
+      background-color: #f06292; /* Darker pink on hover */
+      transform: scale(1.08) rotate(-2deg); /* More dynamic hover */
+      box-shadow: 0 6px 15px rgba(240, 98, 146, 0.4);
+    }
+
+    .results {
+      max-width: 700px; /* Wider results section */
+      margin: 30px auto;
+      text-align: left;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .results div {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .bar-container {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 30px; /* Taller bars */
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .bar {
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      line-height: 30px; /* Center text vertically */
+      transition: width 0.8s ease-in-out; /* Slower, smoother transition */
+      font-size: 1rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .boy-bar {
+      background-color: #2196f3; /* Stronger blue */
+    }
+
+    .girl-bar {
+      background-color: #e91e63; /* Stronger pink */
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Vote no Chá Revelação!</h1>
+
+  <div class="gif-duplo">
+    <img src="https://i.pinimg.com/originals/0b/d2/e1/0bd2e1c36405c1054aae8e762a36c935.gif" alt="Chá Revelação 1">
+    <img src="https://i.pinimg.com/originals/fd/03/93/fd0393a2bbb8e1a038ccabe60ddb5f0f.gif" alt="Chá Revelação 2">
+  </div>
+
+  <div class="buttons">
+    <div class="vote-card">
+      <h2>Menino</h2>
+      <button class="boy-btn" onclick="vote('boy')">Votar</button>
+    </div>
+    <div class="vote-card">
+      <h2>Menina</h2>
+      <button class="girl-btn" onclick="vote('girl')">Votar</button>
+    </div>
+  </div>
+
+  <div class="results">
+    <div><strong>Menino:</strong> <span id="boyCount">0</span> votos</div>
+    <div class="bar-container">
+      <div id="boyBar" class="bar boy-bar" style="width: 0%">0%</div>
+    </div>
+
+    <div><strong>Menina:</strong> <span id="girlCount">0</span> votos</div>
+    <div class="bar-container">
+      <div id="girlBar" class="bar girl-bar" style="width: 0%">0%</div>
+    </div>
+  </div>
+
+  <script>
+    let boyVotes = parseInt(localStorage.getItem('boyVotes')) || 0;
+    let girlVotes = parseInt(localStorage.getItem('girlVotes')) || 0;
+
+    let hasVoted = false; // Flag to check if any vote has been cast
+
+    // Check if votes exist in localStorage on page load
+    if (localStorage.getItem('boyVotes') || localStorage.getItem('girlVotes')) {
+        hasVoted = true;
+    }
+
+    function updateUI() {
+      const total = boyVotes + girlVotes;
+      // Calculate percentages only if a vote has been cast
+      const boyPct = hasVoted && total ? Math.round((boyVotes / total) * 100) : 0;
+      const girlPct = hasVoted && total ? 100 - boyPct : 0;
+
+      // Update vote counts only if a vote has been cast
+      document.getElementById("boyCount").innerText = hasVoted ? boyVotes : 0;
+      document.getElementById("girlCount").innerText = hasVoted ? girlVotes : 0;
+
+      document.getElementById("boyBar").style.width = boyPct + "%";
+      document.getElementById("girlBar").style.width = girlPct + "%";
+
+      document.getElementById("boyBar").innerText = boyPct + "%";
+      document.getElementById("girlBar").innerText = girlPct + "%";
+    }
+
+    function vote(option) {
+      if (option === "boy") {
+        boyVotes++;
+        localStorage.setItem('boyVotes', boyVotes);
+      } else if (option === "girl") {
+        girlVotes++;
+        localStorage.setItem('girlVotes', girlVotes);
+      }
+      hasVoted = true; // Set hasVoted to true after the first vote
+      updateUI();
+    }
+
+    updateUI(); // Initial UI update on page load
+  </script>
+
+</body>
+</html>
