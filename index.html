@@ -17,7 +17,7 @@
             
             --mob-azul-claro: #4C6A89;
             --texto-escuro-geral: #333333;
-            --bg-neutro: #F8F8F8; /* Esta é a cor original que você manteve para o fundo do site */
+            --bg-neutro: #F8F8F8; /* Mantido como no seu código original */
             --shadow-light: rgba(0,0,0,0.08);
             --shadow-medium: rgba(0,0,0,0.12);
         }
@@ -32,11 +32,11 @@
         }
 
         header {
-            background: var(--mob-azul-fundo);
+            background: transparent; /* ALTERADO: Fundo transparente */
             padding: 2.5em 1.5em;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            color: var(--mob-branco);
+            box-shadow: none; /* ALTERADO: Removendo sombra do header transparente */
+            color: var(--texto-escuro-geral); /* ALTERADO: Cor do texto para escuro */
         }
 
         header .hero-content {
@@ -50,7 +50,7 @@
             font-weight: 700;
             font-size: 3em;
             margin-bottom: 0.1em;
-            color: var(--mob-branco);
+            color: var(--texto-escuro-geral); /* ALTERADO: Cor do texto h1 para escuro */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,7 +58,7 @@
         }
         
         header h1 img.header-logo {
-            max-width: 300px; /* AQUI ESTÁ A ALTERAÇÃO: Logo com largura máxima de 300px */
+            max-width: 400px; /* ALTERADO: AUMENTADO PARA 400px */
             height: auto;
             vertical-align: middle;
             margin-bottom: 0;
@@ -67,7 +67,7 @@
         header p {
             font-size: 1.2em;
             margin-top: 0;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--texto-escuro-geral); /* ALTERADO: Cor do texto do parágrafo para escuro */
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
