@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            /* Cores EXATAS da sua logo Mob Advanced */
-            --mob-azul-fundo: #2C4A66; 
-            --mob-laranja: #EF4A2E; 
-            --mob-branco: #FFFFFF; 
+            --mob-azul-fundo: #2C4A66;
+            --mob-laranja: #EF4A2E;
+            --mob-branco: #FFFFFF;
             
-            /* Cores auxiliares, derivadas ou neutras */
-            --mob-azul-claro: #4C6A89; /* Um tom um pouco mais claro do azul principal */
-            --texto-escuro-geral: #333333; /* Para textos que não ficam em fundos escuros */
-            --bg-neutro: #F8F8F8; /* Fundo de seções e corpo */
+            --mob-azul-claro: #4C6A89;
+            --texto-escuro-geral: #333333;
+            --bg-neutro: #F8F8F8; /* Mantido como no seu código original */
             --shadow-light: rgba(0,0,0,0.08);
             --shadow-medium: rgba(0,0,0,0.12);
         }
@@ -28,63 +26,62 @@
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--bg-neutro); /* Fundo geral do site */
+            background: var(--bg-neutro);
             color: var(--texto-escuro-geral);
             line-height: 1.6;
         }
 
-        header {
-            background: var(--mob-azul-fundo); /* Fundo do cabeçalho com o azul da logo */
-            padding: 2.5em 1.5em;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            color: var(--mob-branco); /* Texto do cabeçalho em branco */
-        }
+       header {
+    background: var(--mob-azul-fundo);
+    padding: 2.5em 1.5em;
+    text-align: center;
+    box-shadow: none;
+    color: var(--mob-branco);
+}
 
-        header .hero-content {
-            z-index: 2; 
-            position: relative;
-            padding: 0; /* Ajustado para melhor espaçamento com o padding do header */
-        }
+header .hero-content {
+    z-index: 2;
+    position: relative;
+    padding: 0;
+}
 
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 3em; 
-            margin-bottom: 0.1em;
-            color: var(--mob-branco);
-            /* Estilo para garantir que o texto (se houver) e a imagem fiquem bem alinhados */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px; /* Espaço entre a logo e o texto, se houver */
-        }
-        
-        /* Estilo específico para a imagem da logo dentro do h1 */
-        header h1 img {
-            max-width: 250px; /* Tamanho máximo da logo */
-            height: auto; /* Mantém a proporção */
-            vertical-align: middle; /* Alinha verticalmente com o texto, se houver */
-            margin-bottom: 0; /* Remove margem extra da imagem */
-        }
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 0.1em;
+    color: var(--mob-branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 0;
-            color: rgba(255, 255, 255, 0.9); /* Branco ligeiramente transparente */
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+header h1 img.header-logo {
+    max-width: 300px;
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+header p {
+    font-size: 1.1em;
+    margin-top: 0.2em;
+    color: var(--mob-branco);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
         .button {
-            background: var(--mob-laranja); /* Botões de ação principais em laranja */
+            background: var(--mob-laranja);
             color: var(--mob-branco);
-            padding: 1em 2.2em; 
+            padding: 1em 2.2em;
             border: none;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 700; 
+            font-weight: 700;
             display: inline-block;
             margin: 0.8em 0.5em;
             transition: background 0.3s ease, transform 0.2s ease;
@@ -93,24 +90,24 @@
         }
 
         .button:hover {
-            background: #d94519; /* Laranja um pouco mais escuro no hover */
+            background: #d94519;
             transform: translateY(-2px);
         }
 
         .button.secondary {
-            background: var(--mob-azul-claro); /* Botão secundário em azul mais claro da paleta */
+            background: var(--mob-azul-claro);
             color: var(--mob-branco);
         }
 
         .button.secondary:hover {
-            background: #3e5a7a; /* Tom mais escuro no hover */
+            background: #3e5a7a;
         }
 
         section {
             padding: 4em 1.5em;
             max-width: 1200px;
             margin: 2em auto;
-            background: var(--mob-branco); /* Fundo das seções em branco */
+            background: var(--mob-branco);
             border-radius: 12px;
             box-shadow: 0 6px 15px var(--shadow-light);
             text-align: center;
@@ -118,14 +115,14 @@
 
         h2, h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--mob-azul-fundo); /* Títulos em azul da logo */
+            color: var(--mob-azul-fundo);
             font-weight: 700;
             margin-bottom: 1em;
         }
 
         h2 {
             font-size: 2.6em;
-            border-bottom: 3px solid var(--mob-laranja); /* Linha de destaque em laranja da logo */
+            border-bottom: 3px solid var(--mob-laranja);
             padding-bottom: 0.5em;
             display: inline-block;
         }
@@ -162,7 +159,7 @@
             height: 250px;
             object-fit: cover;
             display: block;
-            border-bottom: 1px solid #eee; /* Borda da imagem cinza claro */
+            border-bottom: 1px solid #eee;
         }
 
         .product-card-content {
@@ -170,19 +167,19 @@
         }
 
         .product-card-content h3 {
-            color: var(--mob-azul-fundo); /* Títulos de produto em azul da logo */
+            color: var(--mob-azul-fundo);
             margin-bottom: 0.5em;
             font-size: 1.4em;
         }
 
         .product-card-content p {
             font-size: 0.95em;
-            color: var(--texto-escuro-geral); /* Texto de descrição em cinza escuro */
+            color: var(--texto-escuro-geral);
             margin-bottom: 1em;
         }
 
         .product-card-content .button {
-            width: calc(100% - 3em); 
+            width: calc(100% - 3em);
             text-align: center;
             display: block;
             margin: 0;
@@ -190,7 +187,7 @@
         }
 
         .cta-banner {
-            background: linear-gradient(135deg, var(--mob-azul-fundo) 0%, #3e5a7a 100%); /* Gradiente com azuis da logo */
+            background: linear-gradient(135deg, var(--mob-azul-fundo) 0%, #3e5a7a 100%);
             color: var(--mob-branco);
             padding: 3em 1.5em;
             text-align: center;
@@ -200,7 +197,7 @@
         }
 
         .cta-banner h2 {
-            color: var(--mob-branco); /* Título do banner em branco */
+            color: var(--mob-branco);
             font-size: 2.5em;
             margin-bottom: 0.5em;
             border-bottom: none;
@@ -216,12 +213,12 @@
         }
         
         .cta-banner .button {
-            background: var(--mob-laranja); /* Botão de CTA em laranja da logo */
+            background: var(--mob-laranja);
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .cta-banner .button:hover {
-            background: #d94519; /* Laranja mais escuro no hover */
+            background: #d94519;
         }
 
         #orcamento form {
@@ -244,26 +241,26 @@
             padding: 1em;
             border-radius: 8px;
             border: 1px solid #ccc;
-            width: calc(100% - 2em); 
+            width: calc(100% - 2em);
             font-size: 1em;
             transition: border-color 0.3s ease;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: var(--mob-laranja); /* Borda em laranja no foco */
-            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.25); /* Sombra em laranja no foco */
+            border-color: var(--mob-laranja);
+            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.25);
         }
 
         label {
             font-weight: 600;
-            color: var(--mob-azul-fundo); /* Labels em azul da logo */
-            display: block; 
+            color: var(--mob-azul-fundo);
+            display: block;
             margin-bottom: 0.5em;
         }
 
         footer {
-            background: var(--mob-azul-fundo); /* Fundo do rodapé em azul da logo */
+            background: var(--mob-azul-fundo);
             color: var(--mob-branco);
             padding: 2.5em;
             text-align: center;
@@ -273,11 +270,11 @@
 
         footer p {
             margin: 0.5em 0;
-            color: rgba(255, 255, 255, 0.9); /* Texto levemente transparente */
+            color: rgba(255, 255, 255, 0.9);
         }
 
         footer a {
-            color: var(--mob-branco); /* Links do rodapé em branco */
+            color: var(--mob-branco);
             text-decoration: none;
         }
 
@@ -305,33 +302,32 @@
                 font-size: 1.2em;
             }
             .product-card img {
-                height: 200px; 
+                height: 200px;
             }
         }
 
-        /* Estilo para o botão flutuante do WhatsApp */
         .whatsapp-float {
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            background-color: var(--mob-laranja); /* Cor do botão WhatsApp com o laranja da logo */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--mob-laranja);
             color: var(--mob-branco);
-            border-radius: 50%; 
-            width: 60px; 
-            height: 60px; 
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2em; 
+            font-size: 2em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000; 
-            text-decoration: none; 
+            z-index: 1000;
+            text-decoration: none;
             transition: transform 0.3s ease;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1); 
-            background-color: #d94519; /* Laranja mais escuro no hover */
+            transform: scale(1.1);
+            background-color: #d94519;
         }
 
         @media (max-width: 768px) {
@@ -349,9 +345,7 @@
 
     <header>
         <div class="hero-content">
-            <h1>
-                <img src="img/mob-advanced-logo.png" alt="Logo Mob Advanced" class="header-logo">
-                </h1>
+            <h1><img src="https://i.imgur.com/R60KqoJ.png" alt="Logo Mob Elevadores" class="header-logo"></h1>
             <p>Sua jornada para o alto começa aqui: Elevadores e Plataformas Daiken com o **Melhor Preço do Brasil**.</p>
             <p>Atendimento completo em Brasília e para **todo o território nacional**.</p>
             <a href="#orcamento" class="button">Solicite um Orçamento Grátis</a>
@@ -495,7 +489,7 @@
         <p>Mob Advanced - Revendedor autorizado Daiken Elevadores</p>
         <p><strong>Atendimento Especializado em Brasília e em todo o Brasil.</strong></p>
         <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobadvanced.com.br</p>
-        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobadvanced" target="_blank" style="color: white; text-decoration: none;">@mobadvanced</a></p>
+        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobadvanced" target="_blank">@mobadvanced</a></p>
     </footer>
 
     <a href="https://wa.me/55619XXXXXXXX" class="whatsapp-float" target="_blank">
