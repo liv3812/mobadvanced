@@ -14,12 +14,20 @@
             --mob-azul-fundo: #2C4A66;
             --mob-laranja: #EF4A2E;
             --mob-branco: #FFFFFF;
-            
             --mob-azul-claro: #4C6A89;
             --texto-escuro-geral: #333333;
-            --bg-neutro: #F8F8F8; /* Mantido como no seu código original */
+            --bg-neutro: #F8F8F8;
             --shadow-light: rgba(0,0,0,0.08);
             --shadow-medium: rgba(0,0,0,0.12);
+            --shadow-strong: rgba(0,0,0,0.2);
+            --gradient-primary: linear-gradient(135deg, var(--mob-azul-fundo) 0%, var(--mob-azul-claro) 100%);
+            --highlight-color: #FFD700; /* Gold for highlighting price */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -31,127 +39,197 @@
             line-height: 1.6;
         }
 
-       header {
-    background: var(--mob-azul-fundo);
-    padding: 2.5em 1.5em;
-    text-align: center;
-    box-shadow: none;
-    color: var(--mob-branco);
-}
+        /* Header Styles */
+        header {
+            background: var(--gradient-primary);
+            padding: 3em 1.5em;
+            text-align: center;
+            color: var(--mob-branco);
+            position: relative;
+            overflow: hidden;
+        }
 
-header .hero-content {
-    z-index: 2;
-    position: relative;
-    padding: 0;
-}
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05 )"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2.5em;
-    margin-bottom: 0.1em;
-    color: var(--mob-branco);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-header h1 img.header-logo {
-    max-width: 300px;
-    height: auto;
-    vertical-align: middle;
-    margin-bottom: 0;
-}
+        .header-logo {
+            max-width: 300px; /* Increased size slightly */
+            height: auto;
+            margin-bottom: 1em; /* Add some space below logo */
+        }
 
-header p {
-    font-size: 1.1em;
-    margin-top: 0.2em;
-    color: var(--mob-branco);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: var(--mob-branco);
+            line-height: 1.2;
+        }
 
+        .highlight {
+            color: var(--highlight-color);
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Stronger glow for price highlight */
+        }
 
+        .hero-subtitle {
+            font-size: 1.5em; /* Larger subtitle */
+            margin-bottom: 0.8em;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.2em; /* Larger description */
+            margin-bottom: 2em;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5em; /* Increased gap between buttons */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Button Styles */
         .button {
             background: var(--mob-laranja);
             color: var(--mob-branco);
-            padding: 1em 2.2em;
+            padding: 1.2em 2.5em;
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
-            margin: 0.8em 0.5em;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(239, 74, 46, 0.3);
             font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1em; /* Larger button text */
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .button:hover::before {
+            left: 100%;
         }
 
         .button:hover {
             background: #d94519;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(239, 74, 46, 0.4);
         }
 
         .button.secondary {
-            background: var(--mob-azul-claro);
+            background: transparent;
+            border: 2px solid var(--mob-branco);
             color: var(--mob-branco);
+            box-shadow: 0 4px 15px rgba(255,255,255,0.1);
         }
 
         .button.secondary:hover {
-            background: #3e5a7a;
+            background: var(--mob-branco);
+            color: var(--mob-azul-fundo);
+            transform: translateY(-3px);
         }
 
+        .button.primary {
+            background: var(--mob-laranja);
+            box-shadow: 0 4px 15px rgba(239, 74, 46, 0.3);
+        }
+
+        /* Section Styles */
         section {
-            padding: 4em 1.5em;
+            padding: 5em 1.5em;
             max-width: 1200px;
             margin: 2em auto;
             background: var(--mob-branco);
-            border-radius: 12px;
-            box-shadow: 0 6px 15px var(--shadow-light);
-            text-align: center;
-        }
-
-        h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--mob-azul-fundo);
-            font-weight: 700;
-            margin-bottom: 1em;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            position: relative;
+            text-align: center; /* Centered text for sections */
         }
 
         h2 {
-            font-size: 2.6em;
-            border-bottom: 3px solid var(--mob-laranja);
-            padding-bottom: 0.5em;
-            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--mob-azul-fundo);
+            font-weight: 700;
+            font-size: 2.8em;
+            margin-bottom: 1em;
+            position: relative;
         }
 
-        h3 {
-            font-size: 1.6em;
-            margin-top: 0;
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--mob-laranja);
+            border-radius: 2px;
         }
 
+        .section-intro {
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 3em;
+            color: var(--texto-escuro-geral);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Product Grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5em;
-            margin-top: 2em;
+            margin-top: 3em;
         }
 
         .product-card {
             background: var(--mob-branco);
-            border-radius: 10px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 12px var(--shadow-medium);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            padding-bottom: 1.5em;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(44, 74, 102, 0.1);
+            text-align: center; /* Centered content within cards */
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px var(--shadow-medium);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px var(--shadow-medium);
         }
 
         .product-card img {
@@ -159,78 +237,125 @@ header p {
             height: 250px;
             object-fit: cover;
             display: block;
-            border-bottom: 1px solid #eee;
         }
 
         .product-card-content {
-            padding: 1.5em;
+            padding: 2em;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5em;
+            font-size: 1.5em;
+            color: var(--mob-branco);
         }
 
         .product-card-content h3 {
             color: var(--mob-azul-fundo);
-            margin-bottom: 0.5em;
-            font-size: 1.4em;
+            margin-bottom: 1em;
+            font-size: 1.6em; /* Slightly larger product titles */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
         }
 
         .product-card-content p {
-            font-size: 0.95em;
+            font-size: 1em;
             color: var(--texto-escuro-geral);
-            margin-bottom: 1em;
+            margin-bottom: 1.5em; /* More space before button */
         }
 
         .product-card-content .button {
-            width: calc(100% - 3em);
-            text-align: center;
-            display: block;
-            margin: 0;
+            width: auto; /* Revert to auto width for buttons in cards */
+            display: inline-block; /* Make it inline block to fit content */
+            margin: 0.5em 0; /* Adjust margin */
             font-size: 0.9em;
+            padding: 1em 2em; /* Adjust padding */
         }
 
+        /* CTA Banner */
         .cta-banner {
-            background: linear-gradient(135deg, var(--mob-azul-fundo) 0%, #3e5a7a 100%);
+            background: var(--gradient-primary);
             color: var(--mob-branco);
-            padding: 3em 1.5em;
+            padding: 4em 2em;
             text-align: center;
-            margin: 2em auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px var(--shadow-medium);
+            margin: 3em auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         .cta-banner h2 {
             color: var(--mob-branco);
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            border-bottom: none;
-            padding-bottom: 0;
+            font-size: 2.8em; /* Larger CTA heading */
+            margin-bottom: 0.8em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-banner h2::after {
+            background: var(--highlight-color);
         }
 
         .cta-banner p {
-            font-size: 1.3em;
-            margin-bottom: 1.5em;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-banner .button {
-            background: var(--mob-laranja);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 1.4em; /* Larger CTA paragraph */
+            margin-bottom: 2em;
+            position: relative;
+            z-index: 2;
         }
 
-        .cta-banner .button:hover {
-            background: #d94519;
-        }
-
+        /* Form Styles */
         #orcamento form {
             display: grid;
             gap: 1.5em;
-            max-width: 600px;
+            max-width: 800px; /* Wider form */
             margin: auto;
-            padding: 2em;
+            padding: 3em;
             border: 1px solid #eee;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px var(--shadow-light);
-            text-align: left;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            background: var(--mob-branco);
+            text-align: left; /* Align form labels to the left */
+        }
+
+        .form-row { /* New class for side-by-side fields */
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5em;
+        }
+
+        @media (min-width: 600px) { /* Two columns on larger screens */
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
         }
 
         input[type="text"],
@@ -238,52 +363,123 @@ header p {
         input[type="tel"],
         select,
         textarea {
-            padding: 1em;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            width: calc(100% - 2em);
+            padding: 1.2em; /* Larger padding for inputs */
+            border-radius: 12px; /* More rounded corners */
+            border: 2px solid #e0e0e0;
             font-size: 1em;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            background: var(--mob-branco);
+            width: 100%; /* Ensure inputs take full width of their container */
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: var(--mob-laranja);
-            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.25);
+            box-shadow: 0 0 0 3px rgba(239, 74, 46, 0.1);
+            transform: translateY(-2px);
         }
 
         label {
             font-weight: 600;
             color: var(--mob-azul-fundo);
-            display: block;
             margin-bottom: 0.5em;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
         }
 
+        /* Footer */
         footer {
             background: var(--mob-azul-fundo);
             color: var(--mob-branco);
-            padding: 2.5em;
+            padding: 3em 2em;
+            margin-top: 3em;
             text-align: center;
-            font-size: 0.9em;
-            margin-top: 2em;
         }
 
-        footer p {
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1em;
+            color: var(--highlight-color);
+        }
+
+        .footer-section p {
             margin: 0.5em 0;
-            color: rgba(255, 255, 255, 0.9);
+            opacity: 0.9;
         }
 
-        footer a {
+        .footer-section a {
             color: var(--mob-branco);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
+        .footer-section a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366; /* Standard WhatsApp Green */
+            color: var(--mob-branco);
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.2em;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
+            50% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); }
+            100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.4em;
             }
-            header p {
-                font-size: 1.1em;
+            .header-logo {
+                max-width: 250px;
+            }
+            .hero-subtitle {
+                font-size: 1.2em;
+            }
+            .hero-description {
+                font-size: 1em;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1em;
+            }
+            .button {
+                width: 90%; /* Make buttons full width on small screens */
+                font-size: 1em;
             }
             .product-grid {
                 grid-template-columns: 1fr;
@@ -301,42 +497,15 @@ header p {
             .cta-banner p {
                 font-size: 1.2em;
             }
-            .product-card img {
-                height: 200px;
-            }
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--mob-laranja);
-            color: var(--mob-branco);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #d94519;
-        }
-
-        @media (max-width: 768px) {
             .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 1.7em;
-                bottom: 15px;
-                right: 15px;
+                width: 60px;
+                height: 60px;
+                font-size: 1.8em;
+                bottom: 20px;
+                right: 20px;
+            }
+            #orcamento form {
+                padding: 2em 1em;
             }
         }
     </style>
@@ -345,74 +514,88 @@ header p {
 
     <header>
         <div class="hero-content">
-            <h1><img src="https://i.imgur.com/R60KqoJ.png" alt="Logo Mob Elevadores" class="header-logo"></h1>
-            <p>Sua jornada para o alto começa aqui: Elevadores e Plataformas Daiken com o **Melhor Preço do Brasil**.</p>
-            <p>Atendimento completo em Brasília e para **todo o território nacional**.</p>
-            <a href="#orcamento" class="button">Solicite um Orçamento Grátis</a>
-            <a href="#produtos" class="button secondary">Conheça Nossos Produtos</a>
+            <img src="https://i.imgur.com/R60KqoJ.png" alt="Logo Mob Advanced" class="header-logo">
+            <h1 class="hero-subtitle">Elevadores e Plataformas Daiken: <span class="highlight">O Melhor Preço do Brasil!</span></h1>
+            <p class="hero-description">Sua jornada para o alto começa aqui. Garantimos **qualidade, segurança e o menor custo** para seu projeto, com atendimento completo em Brasília e para **todo o território nacional**.</p>
+            <div class="hero-buttons">
+                <a href="#orcamento" class="button primary">Solicite seu Orçamento AGORA!</a>
+                <a href="#produtos" class="button secondary">Explore Nossos Modelos</a>
+            </div>
         </div>
     </header>
 
     <section id="sobre">
-        <h2>Por que escolher a Mob Advanced?</h2>
-        <p>Somos especialistas em soluções de elevação, unindo a **expertise da Mob Advanced** em instalação e manutenção com a **qualidade e inovação dos produtos Daiken Elevadores**.</p>
+        <h2>Por que a Mob Advanced é a Sua Melhor Escolha?</h2>
+        <p class="section-intro">Combinamos a excelência da Mob Advanced em instalação e manutenção com a inovação da Daiken, entregando soluções de elevação de alta qualidade com um custo imbatível.</p>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-card-content">
-                    <h3>Melhor Custo-Benefício</h3>
-                    <p>Oferecemos o melhor preço do mercado sem abrir mão da qualidade e segurança que seu projeto merece.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Preço Sem Concorrência</h3>
+                    <p>Confiamos tanto no nosso preço que garantimos: você encontra o melhor custo-benefício em elevadores Daiken só aqui!</p>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-card-content">
-                    <h3>Atendimento Nacional</h3>
-                    <p>Seja em Brasília ou em qualquer canto do Brasil, levamos a solução de elevação ideal até você.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Venda e Instalação Nacional</h3>
+                    <p>De Brasília a qualquer canto do Brasil, levamos a solução de elevação perfeita para você, com nossa equipe técnica qualificada.</p>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-card-content">
-                    <h3>Qualidade Daiken</h3>
-                    <p>Trabalhamos com equipamentos Daiken, sinônimo de tecnologia avançada, durabilidade e desempenho superior.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Qualidade Daiken Comprovada</h3>
+                    <p>Trabalhamos exclusivamente com equipamentos Daiken: tecnologia de ponta, durabilidade e desempenho superior para sua total segurança.</p>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-card-content">
-                    <h3>Especialistas em Instalação</h3>
-                    <p>Nossa equipe técnica altamente qualificada garante uma instalação segura e dentro dos mais altos padrões.</p>
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Atendimento Ágil e Dedicado</h3>
+                    <p>Do primeiro contato à instalação e pós-venda, tenha um suporte completo e personalizado para todas as suas necessidades.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="produtos">
-        <h2>Nossos Produtos em Destaque</h2>
+        <h2>Conheça Nossas Soluções Daiken e Peça seu Orçamento</h2>
+        <p class="section-intro">Temos o elevador ou plataforma ideal para seu projeto residencial ou comercial. **Escolha o seu e garanta o melhor preço do Brasil!**</p>
 
         <div class="product-grid">
             <div class="product-card">
-                 <img src="https://i.imgur.com/b6xBXHX.png" alt="Plataforma AC02">
-
+                <img src="https://i.imgur.com/b6xBXHX.png" alt="Plataforma AC02">
                 <div class="product-card-content">
                     <h3>Plataforma AC02</h3>
                     <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg. Perfeita para acessibilidade discreta.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="product-card">
-                    <img src="https://i.imgur.com/qFeyjt4.jpeg" alt="Plataforma AC08">
+                <img src="https://i.imgur.com/qFeyjt4.jpeg" alt="Plataforma AC08">
                 <div class="product-card-content">
                     <h3>Plataforma AC08</h3>
                     <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg. Segurança e elegância em um só produto.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="product-card">
-                 <img src="https://i.imgur.com/GQaCRUJ.jpeg" alt="Plataforma AC11">
+                <img src="https://i.imgur.com/GQaCRUJ.jpeg" alt="Plataforma AC11">
                 <div class="product-card-content">
                     <h3>Plataforma AC11</h3>
                     <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, projetada para acessibilidade universal em espaços públicos e privados.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
 
@@ -421,7 +604,7 @@ header p {
                 <div class="product-card-content">
                     <h3>Elevador Unno</h3>
                     <p>Design limpo e elegante, perfeito para integrar-se à arquitetura de residências modernas. Capacidade de 375kg, curso até 9m. Operação suave e silenciosa.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
 
@@ -430,7 +613,7 @@ header p {
                 <div class="product-card-content">
                     <h3>Elevador Unique</h3>
                     <p>Acabamento de alto padrão com opção de cabine panorâmica, oferecendo uma experiência de luxo. Solução exclusiva para quem busca sofisticação e conforto.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
 
@@ -439,33 +622,43 @@ header p {
                 <div class="product-card-content">
                     <h3>Elevador EH01 Linnea</h3>
                     <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência para o tráfego diário.</p>
-                    <a href="#" class="button">Ver Detalhes & Baixar Lâmina</a>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="cta-banner">
-        <h2>Pronto para Elevar Seu Projeto?</h2>
-        <p>Receba uma consultoria especializada e um orçamento sem compromisso para o seu elevador ou plataforma.</p>
-        <a href="#orcamento" class="button">Solicitar Orçamento Agora!</a>
+        <h2>Não Perca Tempo, Solicite seu Orçamento Grátis e Garanta o Melhor Preço!</h2>
+        <p>Receba uma consultoria especializada para o seu projeto e descubra como ter um elevador Daiken com o menor investimento do Brasil.</p>
+        <a href="#orcamento" class="button">Quero o Melhor Preço!</a>
     </div>
 
     <section id="orcamento">
-        <h2>Solicite Seu Orçamento Personalizado</h2>
-        <p>Preencha os dados abaixo e entraremos em contato o mais breve possível para entender suas necessidades.</p>
+        <h2>Preencha e Receba seu Orçamento Rápido!</h2>
+        <p class="section-intro">Seu novo elevador ou plataforma está a poucos cliques. Informe seus dados e necessidades, e nossa equipe entrará em contato com a melhor proposta.</p>
         <form>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+            </div>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-
-            <label for="whatsapp">WhatsApp (com DDD):</label>
-            <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" placeholder="Ex: 61987654321" required>
-
-            <label for="cidade">Cidade/UF:</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Ex: Brasília/DF ou São Paulo/SP" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp (com DDD):</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" placeholder="Ex: 61987654321" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade/UF:</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Brasília/DF ou São Paulo/SP" required>
+                </div>
+            </div>
 
             <label for="produto">Produto de Interesse:</label>
             <select id="produto" name="produto">
@@ -482,15 +675,29 @@ header p {
             <label for="mensagem">Detalhes Adicionais (opcional):</label>
             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos mais sobre seu projeto ou dúvidas."></textarea>
 
-            <button type="submit" class="button secondary">Enviar Solicitação</button>
+            <button type="submit" class="button primary">Enviar Solicitação de Orçamento</button>
         </form>
     </section>
 
     <footer>
-        <p>Mob Advanced - Revendedor autorizado Daiken Elevadores</p>
-        <p><strong>Atendimento Especializado em Brasília e em todo o Brasil.</strong></p>
-        <p>WhatsApp: (61) 9XXXX-XXXX | E-mail: contato@mobadvanced.com.br</p>
-        <p>Siga-nos no Instagram: <a href="https://instagram.com/mobadvanced" target="_blank">@mobadvanced</a></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Mob Advanced</h4>
+                <p>Sua parceira em soluções de elevação.</p>
+                <p>Revendedor autorizado Daiken Elevadores.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>WhatsApp: (61) 9XXXX-XXXX</p>
+                <p>E-mail: contato@mobadvanced.com.br</p>
+                <p>Atendimento: Brasília e todo o Brasil</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <p>Instagram: <a href="https://instagram.com/mobadvanced" target="_blank">@mobadvanced</a></p>
+                <p>Qualidade, Preço e Segurança.</p>
+            </div>
+        </div>
     </footer>
 
     <a href="https://wa.me/55619XXXXXXXX" class="whatsapp-float" target="_blank">
