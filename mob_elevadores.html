@@ -21,10 +21,7 @@
             --shadow-medium: rgba(0,0,0,0.12);
             --shadow-strong: rgba(0,0,0,0.2);
             --gradient-primary: linear-gradient(135deg, var(--mob-azul-fundo) 0%, var(--mob-azul-claro) 100%);
-            --highlight-color: #7ED957; /* Vibrant Green - suggests growth, fresh, modern */
-            /* Alternative Highlight Colors to consider: */
-            /* --highlight-color: #57D9BE; Teal/Aqua - suggests tech, calm, reliable */
-            /* --highlight-color: #A36BEF; Purple - suggests premium, unique, creative */
+            --highlight-color: #FFD700; /* Back to Gold/Yellow */
         }
 
         * {
@@ -87,7 +84,7 @@
 
         .highlight {
             color: var(--highlight-color);
-            text-shadow: 0 0 15px rgba(126, 217, 87, 0.7); /* Adjusted shadow for new highlight color */
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Adjusted shadow for yellow */
         }
 
         .hero-subtitle {
@@ -552,7 +549,8 @@
             <div class="product-card">
                 <div class="product-card-content">
                     <div class="card-icon">
-                        <i class="fas fa-gem"></i> </div>
+                        <i class="fas fa-gem"></i>
+                    </div>
                     <h3>Excelência e Tecnologia</h3>
                     <p>Trabalhamos com equipamentos de alta tecnologia e durabilidade, garantindo a performance e a confiabilidade que seu projeto exige.</p>
                 </div>
@@ -560,7 +558,8 @@
             <div class="product-card">
                 <div class="product-card-content">
                     <div class="card-icon">
-                        <i class="fas fa-users-cog"></i> </div>
+                        <i class="fas fa-users-cog"></i>
+                    </div>
                     <h3>Equipe Especializada</h3>
                     <p>Nossos profissionais são altamente qualificados para oferecer consultoria, instalação e manutenção com a máxima segurança e eficiência.</p>
                 </div>
@@ -573,33 +572,6 @@
         <p class="section-intro">Descubra a variedade e a qualidade de nossos elevadores e plataformas. Temos a opção perfeita para cada necessidade, sempre com o **melhor preço garantido!**</p>
 
         <div class="product-grid">
-            <div class="product-card">
-                <img src="https://i.imgur.com/b6xBXHX.png" alt="Plataforma AC02">
-                <div class="product-card-content">
-                    <h3>Plataforma AC02</h3>
-                    <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://i.imgur.com/qFeyjt4.jpeg" alt="Plataforma AC08">
-                <div class="product-card-content">
-                    <h3>Plataforma AC08</h3>
-                    <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://i.imgur.com/GQaCRUJ.jpeg" alt="Plataforma AC11">
-                <div class="product-card-content">
-                    <h3>Plataforma AC11</h3>
-                    <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, acessibilidade universal para espaços diversos.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
-                </div>
-            </div>
-
             <div class="product-card">
                 <img src="https://via.placeholder.com/600x400/2C4A66/FFFFFF?text=Elevador+Unno" alt="Elevador Unno">
                 <div class="product-card-content">
@@ -623,6 +595,33 @@
                 <div class="product-card-content">
                     <h3>Elevador EH01 Linnea</h3>
                     <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência.</p>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/b6xBXHX.png" alt="Plataforma AC02">
+                <div class="product-card-content">
+                    <h3>Plataforma AC02</h3>
+                    <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg.</p>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/qFeyjt4.jpeg" alt="Plataforma AC08">
+                <div class="product-card-content">
+                    <h3>Plataforma AC08</h3>
+                    <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg.</p>
+                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/GQaCRUJ.jpeg" alt="Plataforma AC11">
+                <div class="product-card-content">
+                    <h3>Plataforma AC11</h3>
+                    <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, acessibilidade universal para espaços diversos.</p>
                     <a href="#orcamento" class="button">Solicitar Orçamento</a>
                 </div>
             </div>
@@ -664,12 +663,12 @@
             <label for="produto">Produto de Interesse:</label>
             <select id="produto" name="produto">
                 <option value="" disabled selected>Selecione um produto</option>
-                <option value="Plataforma AC02">Plataforma AC02</option>
-                <option value="Plataforma AC08">Plataforma AC08</option>
-                <option value="Plataforma AC11">Plataforma AC11</option>
                 <option value="Elevador Unno">Elevador Unno</option>
                 <option value="Elevador Unique">Elevador Unique</option>
                 <option value="Elevador EH01 Linnea">Elevador EH01 Linnea</option>
+                <option value="Plataforma AC02">Plataforma AC02</option>
+                <option value="Plataforma AC08">Plataforma AC08</option>
+                <option value="Plataforma AC11">Plataforma AC11</option>
                 <option value="Outro/Não tenho certeza">Outro/Não tenho certeza</option>
             </select>
 
