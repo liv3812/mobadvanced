@@ -1,5 +1,4 @@
-
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -214,8 +213,22 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5em;
-            margin-top: 3em;
+            margin-top: 3em; /* Adjusted this for direct use under section titles */
         }
+
+        /* New: Product Category Section for visual separation */
+        .product-category-section {
+            background-color: var(--bg-neutro); /* A light background to visually separate */
+            border-radius: 15px;
+            padding: 3em 1.5em; /* Padding for the entire category block */
+            margin-bottom: 3em; /* Space between categories */
+            box-shadow: 0 5px 20px var(--shadow-light); /* Subtle shadow for depth */
+        }
+        
+        .product-category-section:last-of-type {
+            margin-bottom: 0; /* No margin after the last category */
+        }
+
 
         /* Sub-headings for product categories */
         .product-category-title {
@@ -223,11 +236,10 @@
             color: var(--mob-azul-fundo);
             font-weight: 700;
             font-size: 2em; /* Slightly smaller than h2 */
-            margin-top: 2em; /* Space from previous content */
+            margin-top: 0; /* No top margin here as it's within its own section */
             margin-bottom: 1.5em;
             text-align: center;
-            width: 100%; /* Ensure it takes full width */
-            grid-column: 1 / -1; /* Make it span all columns in the grid */
+            width: 100%;
             position: relative;
         }
 
@@ -535,6 +547,9 @@
             #orcamento form {
                 padding: 2em 1em;
             }
+            .product-category-section {
+                padding: 2em 1em; /* Adjust padding for mobile */
+            }
         }
     </style>
 </head>
@@ -599,71 +614,74 @@
         <h2>Nossas Soluções para seu Projeto</h2>
         <p class="section-intro">Explore nossa linha completa de elevadores e plataformas. Encontre a opção perfeita para sua necessidade, com a qualidade Mob Elevadores e o <strong>melhor preço garantido!</strong></p>
 
-        <h3 class="product-category-title">Elevadores</h3>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://i.imgur.com/AgilePlaceholder.jpeg" alt="Homelift Ágile">
-                <div class="product-card-content">
-                    <h3>Homelift Ágile</h3>
-                    <p>Compacto, elegante e silencioso, o Homelift Ágile foi projetado para residências que buscam acessibilidade sem abrir mão do design. Suporta até 3 passageiros, possui baixo consumo de energia e instalação rápida, sendo perfeito para ambientes internos com espaço reduzido.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+        <div class="product-category-section">
+            <h3 class="product-category-title">Elevadores</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://i.imgur.com/AgilePlaceholder.jpeg" alt="Homelift Ágile"> <div class="product-card-content">
+                        <h3>Homelift Ágile</h3>
+                        <p>Compacto, elegante e silencioso, o Homelift Ágile foi projetado para residências que buscam acessibilidade sem abrir mão do design. Suporta até 3 passageiros, possui baixo consumo de energia e instalação rápida, sendo perfeito para ambientes internos com espaço reduzido.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <img src="https://i.imgur.com/nZTTyMh.jpeg" alt="Elevador Unique">
-                <div class="product-card-content">
-                    <h3>Elevador Unique</h3>
-                    <p>Acabamento de alto padrão com opção de cabine panorâmica, oferecendo uma experiência de luxo para sua residência.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/nZTTyMh.jpeg" alt="Elevador Unique">
+                    <div class="product-card-content">
+                        <h3>Elevador Unique</h3>
+                        <p>Acabamento de alto padrão com opção de cabine panorâmica, oferecendo uma experiência de luxo para sua residência.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <img src="https://i.imgur.com/hYIRyjh.jpeg" alt="Elevador Unno">
-                <div class="product-card-content">
-                    <h3>Elevador Unno</h3>
-                    <p>Design limpo e elegante, perfeito para integrar-se à arquitetura de residências modernas. Capacidade de 375kg, curso até 9m.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/hYIRyjh.jpeg" alt="Elevador Unno">
+                    <div class="product-card-content">
+                        <h3>Elevador Unno</h3>
+                        <p>Design limpo e elegante, perfeito para integrar-se à arquitetura de residências modernas. Capacidade de 375kg, curso até 9m.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <img src="https://i.imgur.com/HgIEhS1.jpeg" alt="Elevador EH01 Linnea">
-                <div class="product-card-content">
-                    <h3>Elevador EH01 Linnea</h3>
-                    <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/HgIEhS1.jpeg" alt="Elevador EH01 Linnea">
+                    <div class="product-card-content">
+                        <h3>Elevador EH01 Linnea</h3>
+                        <p>Alta performance e baixo consumo de energia, ideal para edifícios com até 4 andares. Confiabilidade e eficiência.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <h3 class="product-category-title">Plataformas de Acessibilidade</h3>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://i.imgur.com/b6xBXHX.png" alt="Plataforma AC02">
-                <div class="product-card-content">
-                    <h3>Plataforma AC02</h3>
-                    <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+        <div class="product-category-section">
+            <h3 class="product-category-title">Plataformas de Acessibilidade</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://i.imgur.com/b6xBXHX.png" alt="Plataforma AC02">
+                    <div class="product-card-content">
+                        <h3>Plataforma AC02</h3>
+                        <p>Compacta e eficiente, ideal para pequenos desníveis em residências e comércios. Curso até 2m, capacidade de 250kg.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <img src="https://i.imgur.com/qFeyjt4.jpeg" alt="Plataforma AC08">
-                <div class="product-card-content">
-                    <h3>Plataforma AC08</h3>
-                    <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/qFeyjt4.jpeg" alt="Plataforma AC08">
+                    <div class="product-card-content">
+                        <h3>Plataforma AC08</h3>
+                        <p>Modelo moderno com portas automáticas, projetado para harmonizar com qualquer ambiente. Curso até 3m, capacidade de 250kg.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <img src="https://i.imgur.com/GQaCRUJ.jpeg" alt="Plataforma AC11">
-                <div class="product-card-content">
-                    <h3>Plataforma AC11</h3>
-                    <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, acessibilidade universal para espaços diversos.</p>
-                    <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/GQaCRUJ.jpeg" alt="Plataforma AC11">
+                    <div class="product-card-content">
+                        <h3>Plataforma AC11</h3>
+                        <p>Estrutura robusta com proteção total, garantindo máxima segurança. Curso até 4m, acessibilidade universal para espaços diversos.</p>
+                        <a href="#orcamento" class="button">Solicitar Orçamento</a>
+                    </div>
                 </div>
             </div>
         </div>
