@@ -1,0 +1,123 @@
+# TP2 - Mecânica 2 - Turbina Eólica NREL 5MW
+
+# ==============================
+# 📌 1. IMPORTS E CONSTANTES
+# ==============================
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constantes gerais
+g = 9.81  # m/s², gravidade
+
+# Torre
+altura_torre = 87.6  # m
+massa_torre = 347460  # kg
+cm_torre = 38.234  # m acima do solo
+
+# Nacelle
+massa_nacelle = 240000  # kg
+
+# Pás
+num_pas = 3
+massa_pa = 17740  # kg
+cm_pa = 20.475  # m ao longo do eixo da pá
+Ixx_pa = 22000  # kg.m²
+Iyy_pa = 4300000  # kg.m²
+Izz_pa = 4300000  # kg.m²
+
+# Rotor
+diametro_rotor = 126  # m
+
+# Carregamento aerodinâmico
+Cd = 0.6
+rho_ar = 1.225  # kg/m³
+V_vento = 12  # m/s (ajuste conforme enunciado ou projeto)
+D_medio = (6 + 3.87) / 2  # m, diâmetro médio da torre
+
+# Torque
+torque_nominal = 4.2e6  # Nm
+A = 0.005 * torque_nominal  # Amplitude oscilação (0.5%)
+f3P = 0.2  # Hz, frequência passagem pás (ajuste conforme necessário)
+
+# ==============================
+# 📌 2. FUNÇÃO DE CARREGAMENTO AERODINÂMICO
+# ==============================
+
+def carregamento_aerodinamico(Cd, rho, V, D):
+    q = 0.5 * Cd * rho * V**2 * D
+    return q  # N/m
+
+q_torre = carregamento_aerodinamico(Cd, rho_ar, V_vento, D_medio)
+print(f"Carregamento aerodinâmico na torre: {q_torre:.2f} N/m")
+
+# ==============================
+# 📌 3. EQUAÇÕES DE MOVIMENTO (FORÇAS E TORQUES)
+# ==============================
+
+# Peso dos componentes
+peso_torre = massa_torre * g
+peso_nacelle = massa_nacelle * g
+peso_pas_total = num_pas * massa_pa * g
+
+print(f"Peso torre: {peso_torre:.2f} N")
+print(f"Peso nacelle: {peso_nacelle:.2f} N")
+print(f"Peso total pás: {peso_pas_total:.2f} N")
+
+# Reação vertical na base
+total_reacao = peso_torre + peso_nacelle + peso_pas_total
+print(f"Reação vertical na base: {total_reacao:.2f} N")
+
+# Momento fletor devido ao carregamento aerodinâmico
+M_fletor_aero = q_torre * altura_torre**2 / 2  # N.m
+print(f"Momento fletor base (aerodinâmico): {M_fletor_aero:.2f} Nm")
+
+# ==============================
+# 📌 4. TORQUE OSCILATÓRIO NO ROTOR
+# ==============================
+
+tempo = np.linspace(0, 10, 1000)  # 10s simulados
+torque_oscilatorio = torque_nominal + A * np.sin(2 * np.pi * f3P * tempo)
+
+plt.figure()
+plt.plot(tempo, torque_oscilatorio / 1e6)
+plt.title("Torque Oscilatório no Rotor (MN.m)")
+plt.xlabel("Tempo (s)")
+plt.ylabel("Torque (MN.m)")
+plt.grid()
+plt.show()
+
+# ==============================
+# 📌 5. ESFORÇOS NAS PÁS
+# ==============================
+
+# Força axial no ponto de fixação
+forca_pa = massa_pa * g
+print(f"Força axial de cada pá: {forca_pa:.2f} N")
+
+# Força centrífuga por pá
+omega = (12.1 * 2 * np.pi) / 60  # rad/s
+raio_pa = diametro_rotor / 2
+F_centrifuga = massa_pa * omega**2 * raio_pa
+print(f"Força centrífuga em cada pá: {F_centrifuga:.2f} N")
+
+# ==============================
+# 📌 6. CONCLUSÕES (EXEMPLO PARA MARKDOWN)
+# ==============================
+
+"""
+### Conclusões
+
+- Reação vertical na base: ~ valor calculado
+- Momento fletor base: ~ valor calculado
+- Torque oscilatório: variação de 0.5% do nominal
+- Forças centrífugas elevadas, importantes para dimensionamento estrutural
+
+### Hipóteses
+- Torre como viga em balanço rígida
+- Massa das pás concentrada no ponto de fixação
+- Carregamento aerodinâmico uniforme
+- Desprezo de efeitos de flexibilidade estrutural para esta análise inicial
+"""
+
+
